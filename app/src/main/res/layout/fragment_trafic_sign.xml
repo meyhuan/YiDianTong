@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/white" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/layout_trafic" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerInParent="true">
+        <TextView android:textSize="20.0sp" android:textColor="@color/black" android:id="@id/tv_pos" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:text="12" android:layout_centerHorizontal="true" />
+        <View android:id="@id/divider" android:background="@color/sign_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="15.0dip" android:layout_below="@id/tv_pos" />
+        <RelativeLayout android:id="@id/layout_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_below="@id/divider" android:layout_centerHorizontal="true">
+            <ImageView android:id="@id/iv_trafic_sign" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_launcher" android:scaleType="fitXY" android:layout_centerInParent="true" />
+        </RelativeLayout>
+        <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/trafic_col" android:id="@id/tv_name" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="15.0dip" android:text="sfsf" android:layout_below="@id/layout_iv" android:layout_centerHorizontal="true" />
+        <LinearLayout android:id="@id/layout_sign_analysis" android:background="@color/sign_analysis_bg" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/tv_name">
+            <TextView android:textSize="15.0sp" android:textColor="@color/trafic_content" android:id="@id/tv_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip" android:layout_marginBottom="10.0dip" android:lineSpacingExtra="3.0dip" />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

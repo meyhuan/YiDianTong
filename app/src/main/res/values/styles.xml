@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="AppBaseTheme" parent="@android:style/Theme.Light" />
+    <style name="AppTheme" parent="@style/AppBaseTheme">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="activity_anim" parent="@style/AppBaseTheme">
+        <item name="android:windowBackground">@drawable/loading</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/ActivityAnim</item>
+    </style>
+    <style name="activity_loading" parent="@style/activity_anim">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="ActivityAnim" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@animator/right_in</item>
+        <item name="android:activityOpenExitAnimation">@animator/left_out</item>
+        <item name="android:activityCloseEnterAnimation">@animator/left_in</item>
+        <item name="android:activityCloseExitAnimation">@animator/right_out</item>
+    </style>
+    <style name="AnimationActivity" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/activity_open</item>
+        <item name="android:activityOpenExitAnimation">@anim/activity_close</item>
+        <item name="android:activityCloseEnterAnimation">@anim/activity_open</item>
+        <item name="android:activityCloseExitAnimation">@anim/activity_close</item>
+    </style>
+    <style name="manager_question_activity_anim" parent="@android:style/Theme.Translucent">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/AnimationActivity</item>
+    </style>
+    <style name="subject_text_style_one">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+    </style>
+    <style name="subject_text_style_two">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/error_te_bg</item>
+        <item name="android:paddingLeft">15.0dip</item>
+    </style>
+    <style name="subject_layout">
+        <item name="android:paddingTop">8.0dip</item>
+        <item name="android:paddingBottom">8.0dip</item>
+        <item name="android:layout_margin">1.0dip</item>
+    </style>
+    <style name="question_content">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/question_content_color</item>
+    </style>
+    <style name="question_option">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/question_content_color</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+    </style>
+    <style name="question_analysis">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">@color/question_analysis_color</item>
+    </style>
+    <style name="simulation_exam_text_rule">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/question_content_color</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+    </style>
+    <style name="simulation_exam_text">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/simulation_exam_bg1</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+    </style>
+    <style name="simulation_exam_text_tip">
+        <item name="android:textSize">15.0sp</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="android:layout_marginLeft">20.0dip</item>
+        <item name="android:layout_marginTop">10.0dip</item>
+        <item name="android:layout_marginBottom">10.0dip</item>
+    </style>
+    <style name="simulation_exam_text_style">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginLeft">15.0dip</item>
+        <item name="android:layout_marginTop">10.0dip</item>
+        <item name="android:layout_marginRight">15.0dip</item>
+    </style>
+    <style name="simulation_exam_text_style1">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:layout_marginLeft">15.0dip</item>
+        <item name="android:layout_marginTop">10.0dip</item>
+        <item name="android:layout_marginRight">15.0dip</item>
+    </style>
+    <style name="custom_dialog_theme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@color/main_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="mystyle" parent="@android:style/Animation">
+        <item name="android:windowEnterAnimation">@anim/activity_open</item>
+        <item name="android:windowExitAnimation">@anim/activity_close</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <style name="subject_text">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/error_te_bg</item>
+        <item name="android:paddingLeft">8.0dip</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+    </style>
+    <style name="subject_size_text">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/subject_te_bg</item>
+    </style>
+    <style name="exam_record_date">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/question_analysis_color</item>
+    </style>
+    <style name="zhentistudy_text">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:textColor">@color/error_te_bg</item>
+        <item name="android:paddingLeft">3.0dip</item>
+        <item name="android:layout_marginLeft">10.0dip</item>
+    </style>
+    <style name="dialog_title">
+        <item name="android:textSize">19.0sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:layout_marginLeft">20.0dip</item>
+        <item name="android:layout_centerVertical">true</item>
+    </style>
+    <style name="NotificationText">
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+    <style name="NotificationTitle">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:textColorPrimary</item>
+    </style>
+    <style name="progressBarHorizontal" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/pb_progress_horizontal</item>
+    </style>
+    <style name="progressBarHorizontal2" parent="@android:style/Widget.ProgressBar.Horizontal">
+        <item name="android:progressDrawable">@drawable/pb_videodetail_progress</item>
+    </style>
+    <style name="dialog_left_button">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/dialog_button_clolor</item>
+        <item name="android:background">@drawable/dialog_button_left</item>
+    </style>
+    <style name="dialog_right_button">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/dialog_button_clolor</item>
+        <item name="android:background">@drawable/dialog_button_right</item>
+    </style>
+    <style name="dialog_middle_button">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:textColor">@color/dialog_button_clolor</item>
+        <item name="android:background">@drawable/dialog_button_middle</item>
+    </style>
+</resources>

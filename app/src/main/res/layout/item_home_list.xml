@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:background="@drawable/home_list_item_clickbg" android:layout_width="fill_parent" android:layout_height="@dimen/home_ad_item_height"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/iv" android:layout_width="@dimen/home_ad_item_image_width" android:layout_height="@dimen/home_ad_item_image_width" android:layout_marginLeft="@dimen/home_ad_item_image_margin" android:layout_marginTop="@dimen/home_ad_item_image_margin" android:scaleType="fitCenter" android:contentDescription="@null" />
+    <RelativeLayout android:gravity="center_vertical" android:paddingLeft="@dimen/home_ad_item_margin" android:paddingTop="@dimen/home_ad_item_margin_top" android:paddingRight="@dimen/home_ad_item_margin" android:layout_width="fill_parent" android:layout_height="@dimen/home_ad_item_height" android:layout_toRightOf="@id/iv">
+        <TextView android:textSize="21.0sp" android:textColor="@color/white" android:id="@id/home_list_item_main_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+        <TextView android:textSize="15.0sp" android:textColor="@color/white" android:id="@id/home_list_item_sub_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+</RelativeLayout>

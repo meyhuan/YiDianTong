@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+        <TextView android:textSize="16.0sp" android:textColor="@color/black" android:gravity="center" android:id="@id/tv_dialog_content" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginRight="5.0dip" />
+        <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+            <Button android:textSize="18.0sp" android:textColor="@color/black" android:id="@id/btn_dialog_cancel" android:background="@drawable/dialog_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dialog_cancel" android:layout_weight="0.5" />
+            <ImageView android:layout_width="wrap_content" android:layout_height="fill_parent" android:src="@drawable/dialog_btn_divider" android:scaleType="fitXY" />
+            <Button android:textSize="18.0sp" android:textColor="@color/black" android:id="@id/btn_dialog_sure" android:background="@drawable/dialog_btn" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/dialog_sure" android:layout_weight="0.5" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

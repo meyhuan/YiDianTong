@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:gravity="center" android:background="@drawable/video_selector" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <FrameLayout android:id="@id/iv_layout" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerHorizontal="true">
+        <ImageView android:layout_gravity="center" android:id="@id/iv" android:layout_width="164.0dip" android:layout_height="117.0dip" android:scaleType="fitXY" />
+        <TextView android:textColor="@color/white" android:gravity="right" android:layout_gravity="bottom|center|right" android:id="@id/tv_time" android:background="#50000000" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text=" 6'1" />
+    </FrameLayout>
+    <TextView android:textSize="16.0sp" android:id="@id/tv_title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_name" android:layout_below="@id/iv_layout" android:layout_centerHorizontal="true" />
+</RelativeLayout>

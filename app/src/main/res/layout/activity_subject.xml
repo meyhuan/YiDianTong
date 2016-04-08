@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/main_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.cheyoohdriver.view.TitleBarLayout android:id="@id/title_layout" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" />
+    <com.android.cheyoohdriver.view.LoadingView android:id="@id/loading_view_layout" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title_layout" />
+    <ScrollView android:id="@id/scrollView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title_layout">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip">
+            <LinearLayout android:orientation="vertical" android:background="@drawable/subject_layout_bg" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip">
+                <ImageView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/icon_study" android:scaleType="fitXY" />
+                <RelativeLayout android:id="@id/layout_sub_zhenti" android:background="@drawable/layout_select" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/subject_layout">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sub_zhenti" android:layout_centerVertical="true" style="@style/subject_text" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_arrow_click" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View android:background="@drawable/question_analysis_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <RelativeLayout android:id="@id/layout_sub_biguomiji" android:background="@drawable/layout_select" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/subject_layout">
+                    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sub_biguomji" android:layout_centerVertical="true" style="@style/subject_text" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_arrow_click" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View android:background="@drawable/question_analysis_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <RelativeLayout android:id="@id/layout_sub_traffic_sign" android:background="@drawable/layout_select" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/subject_layout">
+                    <TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/sub_traffic_sign" style="@style/subject_text" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_arrow_click" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/subject_layout_bg" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="10.0dip">
+                <ImageView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:src="@drawable/icon_practice" android:scaleType="fitXY" />
+                <RelativeLayout android:id="@id/layout_order_practice" android:background="@drawable/layout_select" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/subject_layout">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sub_order_practice" android:layout_centerVertical="true" style="@style/subject_text" />
+                    <TextView android:id="@id/tv_practice_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="40.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/subject_size_text" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_arrow_click" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View android:background="@drawable/question_analysis_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <RelativeLayout android:id="@id/layout_random_practice" android:background="@drawable/layout_select" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/subject_layout">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sub_random_practice" android:layout_centerVertical="true" style="@style/subject_text" />
+                    <TextView android:id="@id/tv_random_practice_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="40.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/subject_size_text" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_arrow_click" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View android:background="@drawable/question_analysis_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <RelativeLayout android:id="@id/layout_error_qes" android:background="@drawable/layout_select" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/subject_layout">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sub_error_qes" android:layout_centerVertical="true" style="@style/subject_text" />
+                    <TextView android:id="@id/tv_error_qes_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="40.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/subject_size_text" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_arrow_click" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </LinearLayout>
+            <LinearLayout android:orientation="vertical" android:background="@drawable/subject_layout_bg" android:paddingBottom="1.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="20.0dip">
+                <ImageView android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:src="@drawable/icon_exam" android:scaleType="fitXY" />
+                <RelativeLayout android:id="@id/layout_simulation_test" android:background="@drawable/layout_select" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/subject_layout">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sub_simulation_test" android:layout_centerVertical="true" style="@style/subject_text" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_arrow_click" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View android:background="@drawable/question_analysis_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <RelativeLayout android:id="@id/layout_week_exam" android:background="@drawable/layout_select" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/subject_layout">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sub_week_exam" android:layout_centerVertical="true" style="@style/subject_text" />
+                    <TextView android:id="@id/tv_week_exam_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="40.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/subject_size_text" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_arrow_click" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+                <View android:background="@drawable/question_analysis_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+                <RelativeLayout android:id="@id/layout_guess_qes" android:background="@drawable/layout_select" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/subject_layout">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sub_guess_qes" android:layout_centerVertical="true" style="@style/subject_text" />
+                    <TextView android:id="@id/tv_guess_qes_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="40.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true" style="@style/subject_size_text" />
+                    <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="10.0dip" android:src="@drawable/ic_arrow_click" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

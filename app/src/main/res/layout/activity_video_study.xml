@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/main_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.cheyoohdriver.view.TitleBarLayout android:id="@id/title_layout" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" />
+    <GridView android:gravity="center_vertical" android:id="@id/tool_gridview" android:scrollbars="none" android:fadingEdge="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="@drawable/transparent" android:numColumns="2" android:layout_below="@id/title_layout" android:layout_centerInParent="true" />
+    <com.android.cheyoohdriver.view.LoadingView android:id="@id/loading_view_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title_layout" />
+</RelativeLayout>

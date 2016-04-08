@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item type="drawable" name="transparent">#00000000</item>
+    <item type="drawable" name="action_item_pressed">#ff20262f</item>
+    <item type="drawable" name="nav_title">#ff32414e</item>
+    <item type="drawable" name="button_sure_pressed">#ff4d8f39</item>
+    <item type="drawable" name="button_sure">#ff60b347</item>
+    <item type="drawable" name="city_item_pressed">#ff87c6d5</item>
+    <item type="drawable" name="transparent1">#99000000</item>
+</resources>

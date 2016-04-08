@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:minWidth="270.0dip"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/text_dialog_title_layout" android:background="@drawable/dialog_title_bg" android:layout_width="fill_parent" android:layout_height="40.0dip">
+        <TextView android:id="@id/text_dialog_title_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" style="@style/dialog_title" />
+    </RelativeLayout>
+    <LinearLayout android:orientation="vertical" android:background="@drawable/dialog_content_bg" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <RelativeLayout android:id="@id/text_dialog_content_layout" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <ImageView android:id="@id/text_dialog_icon_iv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:maxWidth="100.0dip" android:maxHeight="100.0dip" />
+            <TextView android:textSize="17.0sp" android:textColor="@color/black" android:id="@id/text_dialog_content_tv" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_toRightOf="@id/text_dialog_icon_iv" android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/text_dialog_button_layout" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="3.0">
+        <Button android:id="@id/text_dialog_button1" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_weight="1.0" style="@style/dialog_left_button" />
+        <Button android:id="@id/text_dialog_button2" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_weight="1.0" style="@style/dialog_middle_button" />
+        <Button android:id="@id/text_dialog_button3" android:layout_width="fill_parent" android:layout_height="45.0dip" android:layout_weight="1.0" style="@style/dialog_right_button" />
+    </LinearLayout>
+</LinearLayout>

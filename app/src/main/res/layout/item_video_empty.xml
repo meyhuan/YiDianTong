@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/divider" android:background="@drawable/question_analysis_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <TextView android:textSize="18.0sp" android:textColor="@color/question_analysis_color" android:gravity="center" android:layout_gravity="center" android:id="@id/tv_text" android:background="@color/white" android:layout_width="fill_parent" android:layout_height="80.0dip" android:text="无" android:layout_below="@id/divider" />
+    <View android:id="@id/divider_bottom" android:background="@drawable/question_analysis_divider" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/tv_text" />
+    <View android:background="@color/main_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="20.0dip" android:layout_below="@id/divider_bottom" />
+</RelativeLayout>

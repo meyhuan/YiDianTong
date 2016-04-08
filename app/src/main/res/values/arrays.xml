@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="biguo_title">
+        <item>2014新交规扣分标准</item>
+        <item>最低、最高时速题巧记</item>
+        <item>处罚相关题巧记</item>
+        <item>罚款相关题巧记</item>
+        <item>八种交警手势信号口诀</item>
+        <item>安全距离题巧记</item>
+        <item>交规巧记忆</item>
+        <item>日期类题巧记</item>
+        <item>易混淆知识</item>
+    </string-array>
+    <string-array name="biguo_content">
+        <item>@string/koufenbiaozhun</item>
+        <item>@string/shisuti</item>
+        <item>@string/chufa</item>
+        <item>@string/fakuan</item>
+        <item>@string/jiaojingshoushi</item>
+        <item>@string/anquanjuli</item>
+        <item>@string/jiaogui</item>
+        <item>@string/riqi</item>
+        <item>@string/yihunxiao</item>
+    </string-array>
+    <string-array name="law_title">
+        <item>机动车驾驶证申领和使用规定</item>
+        <item>酒驾新规</item>
+        <item>中华人民共和国道路交通安全法（2011修正）</item>
+        <item>道路交通安全违法行为处理程序规定</item>
+        <item>道路交通事故处理程序规定</item>
+    </string-array>
+    <string-array name="law_content">
+        <item>@string/jidongche</item>
+        <item>@string/jiujia</item>
+        <item>@string/anquanfa</item>
+        <item>@string/weifachuli</item>
+        <item>@string/shiguchuli</item>
+    </string-array>
+    <string-array name="knowledge_title">
+        <item>学车流程</item>
+        <item>报名材料及条件</item>
+        <item>学车费用</item>
+        <item>择校选师指南</item>
+        <item>体检注意事项</item>
+        <item>驾校退费</item>
+        <item>作弊与处罚</item>
+    </string-array>
+    <string-array name="knowledge_content">
+        <item>@string/knowledge_learn_process</item>
+        <item>@string/knowledge_request</item>
+        <item>@string/knowledge_fee</item>
+        <item>@string/knowledge_choose_guide</item>
+        <item>@string/knowledge_health_exam</item>
+        <item>@string/knowledge_refund</item>
+        <item>@string/knowledge_cheat_punishment</item>
+    </string-array>
+    <string-array name="group_icons">
+        <item>ic_group_learn_process</item>
+        <item>ic_group_request</item>
+        <item>ic_group_fee</item>
+        <item>ic_group_choose_guide</item>
+        <item>ic_group_health_exam</item>
+        <item>ic_group_refund</item>
+        <item>ic_group_cheat_punish</item>
+    </string-array>
+    <string-array name="get_licence_title">
+        <item>领驾照时间和地点</item>
+        <item>驾照年审和年检</item>
+        <item>驾照换证</item>
+        <item>驾照遗失</item>
+        <item>驾照挂失</item>
+    </string-array>
+    <string-array name="get_licence_content">
+        <item>@string/get_licence_address</item>
+        <item>@string/licence_mot</item>
+        <item>@string/licence_exchange</item>
+        <item>@string/licence_lost</item>
+        <item>@string/licence_loss_report</item>
+    </string-array>
+    <string-array name="jiqiao_title">
+        <item>开车十大注意事项</item>
+        <item>车辆基本操作</item>
+        <item>完美刹车的八个技巧</item>
+        <item>行车出现故障如何处理</item>
+        <item>特殊路况行车要领</item>
+        <item>如何正确停车</item>
+        <item>发生事故如何处理</item>
+        <item>新手上路最容易犯的错</item>
+    </string-array>
+    <string-array name="jiqiao_content">
+        <item>@string/kaiche</item>
+        <item>@string/cheliang</item>
+        <item>@string/wanmei</item>
+        <item>@string/xingche</item>
+        <item>@string/teshu</item>
+        <item>@string/ruhe</item>
+        <item>@string/fasheng</item>
+        <item>@string/xinshou</item>
+    </string-array>
+    <string-array name="newest_driver_title">
+        <item>实用驾车技巧</item>
+        <item>法律法规</item>
+        <item>上路前注意事项</item>
+        <item>行驶中注意事项</item>
+        <item>停车时注意事项</item>
+    </string-array>
+    <string-array name="newest_driver_content">
+        <item>@string/app_name</item>
+        <item>@string/app_name</item>
+        <item>@string/notice_of_predrive</item>
+        <item>@string/notice_of_driving</item>
+        <item>@string/notice_of_stop_driving</item>
+    </string-array>
+</resources>

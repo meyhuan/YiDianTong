@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@drawable/home_page_bg" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.cheyoohdriver.view.TitleBarLayout android:id="@id/title_layout" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" />
+    <TextView android:textSize="14.0sp" android:textColor="@android:color/white" android:id="@id/tv_setting_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:text="@string/exam_ques_setting_tip" android:layout_below="@id/title_layout" android:layout_centerHorizontal="true" />
+    <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/tv_city_choose_title" android:background="@drawable/city_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/city" android:layout_above="@id/rl_city_choose" android:layout_alignParentLeft="true" />
+    <RelativeLayout android:id="@id/rl_city_choose" android:background="@drawable/city_choose_bg" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:layout_above="@id/tv_licence_type" android:layout_alignParentLeft="true">
+        <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/tv_cur_city" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:layout_toLeftOf="@id/iv_arrow" android:layout_centerVertical="true" />
+        <ImageView android:id="@id/iv_arrow" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_array_selector" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@null" />
+        <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/tv_city_choose" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/city_choose_tip" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
+    </RelativeLayout>
+    <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/tv_licence_type" android:background="@drawable/licence_type_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/driver_licence_type" android:layout_alignParentLeft="true" android:layout_centerInParent="true" />
+    <LinearLayout android:gravity="center_vertical" android:id="@id/rl_car_choose" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="20.0dip" android:layout_below="@id/tv_licence_type">
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_small_car" android:background="@drawable/car_type_bg_selected" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_car" android:scaleType="center" android:contentDescription="@null" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/small_car" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_truck" android:background="@drawable/car_type_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_truck" android:scaleType="center" android:contentDescription="@null" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/truck" />
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0">
+            <ImageView android:layout_gravity="center_horizontal" android:id="@id/iv_bus" android:background="@drawable/car_type_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_bus" android:scaleType="center" android:contentDescription="@null" />
+            <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/bus" />
+        </LinearLayout>
+    </LinearLayout>
+    <Button android:textSize="16.0sp" android:textColor="@android:color/white" android:gravity="center" android:id="@id/bt_sure" android:background="@drawable/button_sure_bg" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_margin="10.0dip" android:text="@string/sure" android:layout_below="@id/rl_car_choose" />
+    <com.android.cheyoohdriver.view.LoadingView android:id="@id/loading_view_layout" android:background="@color/window_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+</RelativeLayout>

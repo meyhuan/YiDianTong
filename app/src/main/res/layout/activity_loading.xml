@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:orientation="vertical" android:id="@id/loading_image" android:background="@drawable/loading" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView android:id="@id/loading_iv_ad" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" android:contentDescription="@string/app_name" />
+    <Button android:textColor="@color/white" android:id="@id/close" android:background="@drawable/loading_ad_close_style" android:visibility="gone" android:layout_width="43.0dip" android:layout_height="43.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/screen_ad_close" android:layout_alignParentRight="true" />
+</RelativeLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.android.cheyoohdriver.view.LoopViewPager android:id="@id/home_banner_viewpager" android:layout_width="fill_parent" android:layout_height="@dimen/activity_hight" />
+    <RadioGroup android:orientation="horizontal" android:id="@id/home_banner_radiogroup" android:paddingBottom="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+    <View android:id="@id/home_banner_line" android:background="#ffececec" android:layout_width="fill_parent" android:layout_height="0.5dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical" android:background="@color/main_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.android.cheyoohdriver.view.TitleBarLayout android:id="@id/title_layout" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" />
+    <ImageView android:id="@id/iv" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="20.0dip" android:layout_marginRight="20.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/ic_logo" android:contentDescription="@null" />
+    <ScrollView android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+            <TextView android:textSize="15.0sp" android:textColor="@color/color_5e5e5e" android:id="@id/tv_about" android:paddingLeft="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip" android:text="@string/about_content" android:lineSpacingExtra="5.0dip" />
+            <TextView android:textSize="18.0sp" android:textColor="@color/black" android:id="@id/tv_platform" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:text="@string/official_platform" />
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_platform" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="5.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="@color/color_60b347" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/official" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/color_60b347" android:id="@id/tv_website" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/official_website" />
+            </LinearLayout>
+            <LinearLayout android:orientation="horizontal" android:id="@id/ll_weixin" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="5.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="@color/color_60b347" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/weixin_code" />
+                <TextView android:textSize="16.0sp" android:textColor="@color/color_60b347" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/weixin_code_text" />
+            </LinearLayout>
+            <TextView android:textSize="18.0sp" android:textColor="@color/black" android:id="@id/tv_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="10.0dip" android:text="@string/version_info" />
+            <RelativeLayout android:id="@id/rl_version" android:background="@drawable/city_choose_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginRight="20.0dip">
+                <TextView android:textSize="16.0sp" android:textColor="@color/color_60b347" android:id="@id/tv_cur_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/cur_version" android:layout_centerVertical="true" />
+                <ImageView android:id="@id/iv_update_notice" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="20.0dip" android:src="@drawable/ic_update_notice" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@null" />
+                <ImageView android:id="@id/iv_update_mark" android:visibility="invisible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_arrow_click" android:layout_alignParentRight="true" android:layout_centerVertical="true" android:contentDescription="@null" />
+            </RelativeLayout>
+            <TextView android:textSize="18.0sp" android:textColor="@color/black" android:id="@id/tv_contact" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:text="@string/contact_info" />
+            <TextView android:textSize="16.0sp" android:textColor="@color/color_60b347" android:id="@id/tv_cooperate" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_marginTop="5.0dip" android:layout_marginBottom="80.0dip" android:text="@string/cooperation" />
+            <TextView android:textSize="15.0sp" android:textColor="@color/color_5e5e5e" android:gravity="center" android:layout_gravity="bottom" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:text="@string/copyright" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

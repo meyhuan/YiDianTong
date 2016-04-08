@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:id="@id/layout_video" android:background="@drawable/layout_select" android:layout_width="fill_parent" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <View android:id="@id/divider" android:background="@drawable/question_analysis_divider" android:layout_width="fill_parent" android:layout_height="0.5dip" />
+    <RelativeLayout android:id="@id/video_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="20.0dip" android:layout_toLeftOf="@id/rl_state" android:layout_below="@id/divider" android:layout_alignParentLeft="true" android:layout_centerVertical="true">
+        <TextView android:textSize="18.0sp" android:textColor="@color/trafic_content" android:id="@id/tv_video_name" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/sub_study" android:drawablePadding="8.0dip" />
+        <ProgressBar android:id="@id/pb_progress" android:layout_width="fill_parent" android:layout_height="wrap_content" android:max="100" android:progress="20" android:layout_below="@id/tv_video_name" style="@style/progressBarHorizontal" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/question_analysis_color" android:id="@id/tv_progress" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="123/123" android:layout_below="@id/pb_progress" />
+        <TextView android:textSize="14.0sp" android:textColor="@color/question_analysis_color" android:id="@id/tv_video_state" android:paddingTop="5.0dip" android:paddingBottom="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="正在下载" android:layout_below="@id/pb_progress" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/rl_state" android:layout_width="48.0dip" android:layout_height="wrap_content" android:layout_margin="20.0dip" android:layout_alignParentRight="true" android:layout_centerVertical="true">
+        <ImageView android:id="@id/video_state" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" android:layout_centerInParent="true" />
+        <TextView android:textSize="18.0sp" android:textColor="@color/subject_te_bg" android:id="@id/video_play" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/download_play" android:layout_centerInParent="true" />
+    </RelativeLayout>
+</RelativeLayout>

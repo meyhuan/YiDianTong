@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="text_ad_top_hight">37.0dip</dimen>
+    <dimen name="text_ad_mid_hight">33.0dip</dimen>
+    <dimen name="main_activity_item_margin_vertical">15.0dip</dimen>
+    <dimen name="main_activity_item_margin">5.0dip</dimen>
+    <dimen name="top_ad_view_margin">11.0dip</dimen>
+    <dimen name="top_ad_view_margin_m">5.0dip</dimen>
+    <dimen name="home_ad_item_height">62.0dip</dimen>
+    <dimen name="home_ad_item_margin">35.0dip</dimen>
+    <dimen name="home_ad_item_margin_top">15.0dip</dimen>
+    <dimen name="home_ad_item_image_margin">12.0dip</dimen>
+    <dimen name="home_ad_item_image_width">27.0dip</dimen>
+</resources>
