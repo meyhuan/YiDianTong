@@ -1,22 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout android:orientation="vertical" android:background="@color/main_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <FrameLayout android:id="@id/layout_content" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <com.android.cheyoohdriver.view.TitleBarLayout android:id="@id/title_layout" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" />
-            <RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent">
-                <android.support.v4.view.ViewPager android:layout_gravity="center" android:id="@id/viewpager" android:visibility="visible" android:persistentDrawingCache="animation" android:layout_width="wrap_content" android:layout_height="wrap_content" android:flipInterval="30" android:layout_weight="1.0" android:layout_below="@id/ad_text_top_view" />
-                <com.android.cheyoohdriver.view.LoadingView android:id="@id/loading_view_layout" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
-                <RelativeLayout android:id="@id/ad_text_top_view" android:layout_width="fill_parent" android:layout_height="@dimen/text_ad_top_hight">
-                    <ImageView android:id="@id/ad_text_top_info" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/top_ad_view_margin" android:src="@drawable/textad_top_info" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
-                    <com.android.cheyoohdriver.view.ScrollTextView android:textSize="15.0sp" android:textColor="@color/color_a6a6a6" android:gravity="center_vertical" android:id="@id/question_top_ad_view" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="@dimen/top_ad_view_margin_m" android:layout_marginRight="@dimen/top_ad_view_margin_m" android:singleLine="true" android:layout_toLeftOf="@id/ad_text_top_next" android:layout_toRightOf="@id/ad_text_top_info" android:layout_centerVertical="true" />
-                    <ImageView android:id="@id/ad_text_top_next" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="@dimen/top_ad_view_margin" android:src="@drawable/textad_top_next" android:layout_alignParentRight="true" android:layout_centerVertical="true" />
-                    <View android:background="@color/color_a6a6a6" android:layout_width="fill_parent" android:layout_height="1.0px" android:layout_alignParentBottom="true" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@id/layout_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@id/viewpager"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/ad_text_top_view"
+                    android:layout_gravity="center"
+                    android:layout_weight="1.0"
+                    android:flipInterval="30"
+                    android:persistentDrawingCache="animation"
+                    android:visibility="visible" />
+
+                <RelativeLayout
+                    android:id="@id/ad_text_top_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="@dimen/text_ad_top_hight">
+
+                    <ImageView
+                        android:id="@id/ad_text_top_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/top_ad_view_margin"
+                        android:src="@drawable/textad_top_info" />
+
+                    <com.xiaoya.yidiantong.view.ScrollTextView
+                        android:id="@id/question_top_ad_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/top_ad_view_margin_m"
+                        android:layout_marginRight="@dimen/top_ad_view_margin_m"
+                        android:layout_toLeftOf="@id/ad_text_top_next"
+                        android:layout_toRightOf="@id/ad_text_top_info"
+                        android:background="@android:color/transparent"
+                        android:gravity="center_vertical"
+                        android:singleLine="true"
+                        android:textColor="@color/color_a6a6a6"
+                        android:textSize="15.0sp" />
+
+                    <ImageView
+                        android:id="@id/ad_text_top_next"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/top_ad_view_margin"
+                        android:src="@drawable/textad_top_next" />
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="1.0px"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/color_a6a6a6" />
                 </RelativeLayout>
             </RelativeLayout>
         </LinearLayout>
-        <RelativeLayout android:orientation="vertical" android:id="@id/layout_first_open" android:background="@color/window_bg" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
-            <ImageView android:layout_gravity="bottom" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="50.0dip" android:src="@drawable/qes_first" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:id="@id/layout_first_open"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/window_bg"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="bottom"
+                android:layout_marginBottom="50.0dip"
+                android:src="@drawable/qes_first" />
         </RelativeLayout>
     </FrameLayout>
 </LinearLayout>

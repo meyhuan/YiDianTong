@@ -111,4 +111,26 @@
         <item>@string/notice_of_driving</item>
         <item>@string/notice_of_stop_driving</item>
     </string-array>
+
+    <string-array name="question_category">
+        <item>时间题</item>
+        <item>距离题</item>
+        <item>标线题</item>
+        <item>标志题</item>
+        <item>速度题</item>
+        <item>手势题</item>
+        <item>信号灯</item>
+        <item>酒驾题</item>
+        <item>灯光题</item>
+        <item>装置题</item>
+        <item>路况题</item>
+        <item>罚款题</item>
+        <item>仪表题</item>
+        <item>记分题</item>
+        <item>仪表题</item>
+        <item>多选题</item>
+        <item>其他</item>
+        <item>2014年新增</item>
+    </string-array>
+
 </resources>
