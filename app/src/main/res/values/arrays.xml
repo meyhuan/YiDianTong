@@ -112,6 +112,17 @@
         <item>@string/notice_of_stop_driving</item>
     </string-array>
 
+    <string-array name="newest_driver_title2">
+        <item>上路前注意事项</item>
+        <item>行驶中注意事项</item>
+        <item>停车时注意事项</item>
+    </string-array>
+    <string-array name="newest_driver_content2">
+        <item>@string/notice_of_predrive</item>
+        <item>@string/notice_of_driving</item>
+        <item>@string/notice_of_stop_driving</item>
+    </string-array>
+
     <string-array name="question_category">
         <item>时间题</item>
         <item>距离题</item>

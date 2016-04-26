@@ -36,8 +36,14 @@ public class PreKnowledgeActivity extends StarterActivity implements
 
     private SubIndex mSubIndex;
 
-    public enum SubIndex implements Serializable{
-        PRE_STUDY,BIGUOBIJI
+    public static class SubIndex implements Serializable{
+        public String [] groupTitleArr ;
+        public String [] childContent;
+
+        public SubIndex(String [] groupTitleArr, String [] childContent){
+            this.groupTitleArr = groupTitleArr;
+            this.childContent = childContent;
+        }
     }
 
     @Override
@@ -61,26 +67,14 @@ public class PreKnowledgeActivity extends StarterActivity implements
 
         this.mGroupList = new ArrayList<>();
         this.mchildList = new ArrayList<>();
-        String[] groupTitleArr = null;
-        String[] childContent = null;
         mSubIndex = (SubIndex) getIntent().getSerializableExtra("sub_index");
         if(mSubIndex == null){
-            mSubIndex = SubIndex.PRE_STUDY;
-        }
-        groupTitleArr = getResources().getStringArray(R.array.knowledge_title);
-        childContent = getResources().getStringArray(R.array.knowledge_content);
-
-        if(mSubIndex ==  SubIndex.PRE_STUDY){
-            groupTitleArr = getResources().getStringArray(R.array.knowledge_title);
-            childContent = getResources().getStringArray(R.array.knowledge_content);
-        }else if(mSubIndex ==  SubIndex.BIGUOBIJI){
-            groupTitleArr = getResources().getStringArray(R.array.biguo_title);
-            childContent = getResources().getStringArray(R.array.biguo_content);
+            return;
         }
 
-        for (int i = 0; i < groupTitleArr.length; i ++){
-            mGroupList.add(new ExpandableGroupModel(groupTitleArr[i], 0));
-            mchildList.add(new ExpandleChildModel(groupTitleArr[i], childContent[i]));
+        for (int i = 0; i < mSubIndex.groupTitleArr.length; i ++){
+            mGroupList.add(new ExpandableGroupModel(mSubIndex.groupTitleArr[i], 0));
+            mchildList.add(new ExpandleChildModel(mSubIndex.groupTitleArr[i], mSubIndex.childContent[i]));
         }
     }
 

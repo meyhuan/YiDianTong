@@ -57,7 +57,9 @@ public class SubjectIndexActivity extends StarterActivity implements View.OnClic
                 break;
             case R.id.layout_sub_biguomiji:
                 Intent intent = new Intent(mContext, PreKnowledgeActivity.class);
-                intent.putExtra("sub_index", PreKnowledgeActivity.SubIndex.BIGUOBIJI);
+                intent.putExtra("sub_index", new PreKnowledgeActivity.SubIndex(
+                        getResources().getStringArray(R.array.biguo_title),
+                        getResources().getStringArray(R.array.biguo_content)));
                 startActivity(intent);
                 break;
             case R.id.layout_sub_traffic_sign:

@@ -16,6 +16,7 @@ import com.smartydroid.android.starter.kit.utilities.Utils;
 import com.xiaoya.yidiantong.database.DBAdapter;
 import com.xiaoya.yidiantong.model.Question;
 import com.xiaoya.yidiantong.model.QuestionCategory;
+import com.xiaoya.yidiantong.ui.NewDriverActivity;
 import com.xiaoya.yidiantong.ui.PreKnowledgeActivity;
 import com.xiaoya.yidiantong.ui.SubjectIndexActivity;
 
@@ -81,7 +82,9 @@ public class MainActivity extends StarterActivity implements View.OnClickListene
         switch (v.getId()){
             case R.id.main_layout_pre_knowledge:
                 Intent intent = new Intent(mContext, PreKnowledgeActivity.class);
-                intent.putExtra("sub_index", PreKnowledgeActivity.SubIndex.PRE_STUDY);
+                intent.putExtra("sub_index", new PreKnowledgeActivity.SubIndex(
+                        getResources().getStringArray(R.array.knowledge_title),
+                        getResources().getStringArray(R.array.knowledge_content)));
                 startActivity(intent);
                 break;
 
@@ -98,15 +101,19 @@ public class MainActivity extends StarterActivity implements View.OnClickListene
                 break;
 
             case R.id.main_layout_subject4:
-
+                startActivity(SubjectIndexActivity.class);
                 break;
 
             case R.id.main_layout_get_licence:
-
+                Intent intentLicence = new Intent(mContext, PreKnowledgeActivity.class);
+                intentLicence.putExtra("sub_index", new PreKnowledgeActivity.SubIndex(
+                        getResources().getStringArray(R.array.get_licence_title),
+                        getResources().getStringArray(R.array.get_licence_content)));
+                startActivity(intentLicence);
                 break;
 
             case R.id.main_layout_driver:
-
+                startActivity(NewDriverActivity.class);
                 break;
         }
     }

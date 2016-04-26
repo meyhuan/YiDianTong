@@ -2,6 +2,7 @@
 <resources>
     <color name="main_background">#fff6f6f6</color>
     <color name="city_select">#fff7f9fb</color>
+    <color name="list_item_select">#ffa4a4a4</color>
     <color name="city_province_bg">#fff3f5f8</color>
     <color name="city_province_text">#ff232932</color>
     <color name="city_edittext_bg">#ffd8dce4</color>
