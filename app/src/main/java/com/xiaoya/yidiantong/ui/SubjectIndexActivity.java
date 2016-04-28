@@ -63,7 +63,7 @@ public class SubjectIndexActivity extends StarterActivity implements View.OnClic
                 startActivity(intent);
                 break;
             case R.id.layout_sub_traffic_sign:
-
+                startActivity(TraficSignAndMarkCategoryActivity.class);
                 break;
             case R.id.layout_order_practice:
 

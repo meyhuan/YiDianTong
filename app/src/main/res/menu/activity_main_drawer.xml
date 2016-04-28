@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="none">
+        <item
+            android:id="@+id/nav_about_bdj"
+            android:title="@string/about_baduanjing" />
+        <item
+            android:id="@+id/nav_about_us"
+            android:title="@string/about_us" />
+        <item
+            android:id="@+id/nav_comment"
+            android:title="@string/uer_comment" />
+        <item
+            android:id="@+id/nav_fb"
+            android:title="@string/face_back" />
+
+        <item
+            android:id="@+id/nav_setting"
+            android:title="@string/setting" />
+
+        <item
+            android:id="@+id/nav_invite"
+            android:title="@string/invite" />
+    </group>
+
+
+</menu>

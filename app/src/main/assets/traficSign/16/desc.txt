@@ -1,0 +1,8 @@
+﻿picName=tzxhao.jpg，name=停止信号，content=手势示意：不准前方车辆通行<br/>解读：与旧版手势示意相同。
+picName=zxxh.jpg，name=直行信号，content=手势示意：准许右方直行的车辆通行<br/>解读：由原来的“直行信号”与“直行快速通行信号”合并而成。
+picName=zzwxh.jpg，name=左转弯信号，content=手势示意：准许车辆左转弯，在不妨碍被放行车辆通行的情况下可以掉头<br/>解读：新指挥手势取消了“左大转弯信号”手势，保留了左转弯信号。
+picName=zzwdzxh.jpg，name=左转弯待转信号，content=手势示意：准许交警左方左转弯的车辆进入路口，沿左转弯行驶方向靠近路口中心，等待左转弯信号。
+picName=yzwxh.jpg，name=右转弯信号，content=手势示意：准许交警右方的车辆右转弯。
+picName=bdxh.jpg，name=变道信号，content=车辆腾空指定的车道，减速慢行<br/>解读：这是新增的交警指挥手势，在执勤过程中使用概率不高，一般情况下交警在执行警卫任务、疏导交通中可能使用这种手势。
+picName=jsmx.jpg，name=减速慢行，content=手势示意：车辆减速慢行。
+picName=kbtcxh.jpg，name=靠边停车信号，content=手势示意：车辆靠边停车<br/>解读：由原来的“靠边停车信号”与“违章车辆靠边停车信号”合并而成。

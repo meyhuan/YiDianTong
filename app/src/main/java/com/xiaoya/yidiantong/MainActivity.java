@@ -4,11 +4,18 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
-import com.apkfuns.logutils.LogUtils;
 import com.iaraby.db.helper.Config;
 import com.smartydroid.android.starter.kit.app.StarterActivity;
 import com.smartydroid.android.starter.kit.utilities.SPUtils;
@@ -16,16 +23,16 @@ import com.smartydroid.android.starter.kit.utilities.Utils;
 import com.xiaoya.yidiantong.database.DBAdapter;
 import com.xiaoya.yidiantong.model.Question;
 import com.xiaoya.yidiantong.model.QuestionCategory;
+import com.xiaoya.yidiantong.ui.LoginActivity;
 import com.xiaoya.yidiantong.ui.NewDriverActivity;
 import com.xiaoya.yidiantong.ui.PreKnowledgeActivity;
 import com.xiaoya.yidiantong.ui.SubjectIndexActivity;
 
-import org.litepal.crud.DataSupport;
-
 import java.io.IOException;
 
 
-public class MainActivity extends StarterActivity implements View.OnClickListener{
+public class MainActivity extends StarterActivity implements View.OnClickListener,
+        NavigationView.OnNavigationItemSelectedListener{
 
 
     private static final String TAG = "MainActivity";
@@ -37,13 +44,16 @@ public class MainActivity extends StarterActivity implements View.OnClickListene
     private LinearLayout mainLayoutSubject4;
     private LinearLayout mainLayoutGetLicence;
     private LinearLayout mainLayoutDriver;
+    private DrawerLayout drawerLayout;
+    private NavigationView navView;
 
+    private ImageView mAvatarImageView;
+    private TextView mNicknameTextView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        isAddToolBar = true;
         setContentView(R.layout.activity_main);
-
-
         //Initial
         //make sure the database is opened
         if (!DBAdapter.getInstance().isOpen()) {
@@ -57,6 +67,33 @@ public class MainActivity extends StarterActivity implements View.OnClickListene
         if(!(boolean) SPUtils.get(mContext, "database_loading_complete", false)){
             new LoadTask().execute();
         }
+
+
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        navView = (NavigationView) findViewById(R.id.nav_view);
+        setSupportActionBar(toolbar);
+        final ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close){
+            @Override
+            public void onDrawerOpened(View drawerView) {
+                super.onDrawerOpened(drawerView);
+            }
+        };
+        drawerLayout.addDrawerListener(toggle);
+        toggle.syncState();
+        toolbar.setBackgroundColor(getResources().getColor(R.color.main_tool_bar_bg));
+
+        navView.setNavigationItemSelectedListener(this);
+        //需要加上这一句才能显示图片的正确颜色
+        navView.setItemIconTintList(null);
+        View headerView = navView.getHeaderView(0);
+        headerView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                    startActivity(new Intent(mContext, LoginActivity.class));
+            }
+        });
+
     }
     @Override
     protected void setupViews() {
@@ -76,6 +113,7 @@ public class MainActivity extends StarterActivity implements View.OnClickListene
         mainLayoutGetLicence.setOnClickListener(this);
         mainLayoutDriver.setOnClickListener(this);
     }
+
 
     @Override
     public void onClick(View v) {
@@ -118,6 +156,21 @@ public class MainActivity extends StarterActivity implements View.OnClickListene
         }
     }
 
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        // Handle navigation view item clicks here.
+        int id = item.getItemId();
+        if (id == R.id.nav_about_bdj) {
+        } else if (id == R.id.nav_about_us) {
+        } else if (id == R.id.nav_fb) {
+        } else if (id == R.id.nav_comment) {
+        } else if (id == R.id.nav_setting) {
+        }else if (id == R.id.nav_invite) {
+        }
+        drawerLayout.closeDrawer(GravityCompat.START);
+        return true;
+    }
+
     class LoadTask extends AsyncTask<Void, Integer, Void>{
 
         @Override
@@ -157,6 +210,7 @@ public class MainActivity extends StarterActivity implements View.OnClickListene
     }
 
     private void addQuestion(Cursor c){
+
         String analysis = c.getString(c.getColumnIndex("analysis"));
         String difficylty = c.getString(c.getColumnIndex("difficylty"));
         int id = c.getInt(c.getColumnIndex("id"));
@@ -214,5 +268,11 @@ public class MainActivity extends StarterActivity implements View.OnClickListene
         questionCategory.setNum(num);
         questionCategory.save();
 
+    }
+
+    @Override
+    public void onCreateCustomToolBar(Toolbar toolbar) {
+        super.onCreateCustomToolBar(toolbar);
+        toolbar.setBackgroundResource(R.color.colorPrimary);
     }
 }

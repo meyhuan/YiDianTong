@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="AppBaseTheme" parent="@android:style/Theme.Light" />
-    <style name="AppTheme" parent="@style/AppBaseTheme">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/white</item>
         <item name="android:windowNoTitle">true</item>
     </style>
-
     <style name="activity_anim" parent="@style/AppBaseTheme">
         <item name="android:windowBackground">@drawable/loading</item>
         <item name="android:windowNoTitle">true</item>
@@ -155,5 +160,29 @@
         <item name="android:textSize">16.0sp</item>
         <item name="android:textColor">@color/dialog_button_clolor</item>
         <item name="android:background">@drawable/dialog_button_middle</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="TextStyle">
+    </style>
+
+    <style name="TextStyle.Primary">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="TextStyle.Dark">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/textColorSecondary</item>
+    </style>
+
+
+    <style name="EditViewTextStyle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:textColorHint">@color/textColorGray</item>
     </style>
 </resources>
