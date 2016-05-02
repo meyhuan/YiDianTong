@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_bg">
+
+    <ImageView
+        android:id="@+id/register_back_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:src="@drawable/ic_title_back"
+        android:layout_margin="15dp"
+        android:visibility="gone"
+        android:layout_gravity="left|top"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/TextStyle.Primary"
+            android:text="@string/register_account"/>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/container_login_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edit_login_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/EditViewTextStyle"
+                android:hint="@string/register_input_phone"
+                android:inputType="phone"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/container_login_valid_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TextInputEditText
+                    android:id="@+id/edit_login_valid_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/EditViewTextStyle"
+                    android:hint="@string/register_input_valid_code"
+                    android:inputType="number"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:id="@+id/text_valid_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|end"
+                android:padding="5dp"
+                android:gravity="center"
+                android:textAppearance="@style/TextStyle.Primary"
+                android:text="@string/register_send_valid_code"/>
+        </FrameLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/container_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/edit_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/register_input_password"
+                style="@style/EditViewTextStyle"
+                android:inputType="textPassword"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <CheckBox
+            android:id="@+id/register_show_pw_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:textColor="@color/textColorGray"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:text="@string/register_show_password"/>
+
+        <Button
+            android:id="@+id/register_confirm_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/btn_select"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:text="@string/register_commit"/>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -54,16 +54,7 @@ public class MainActivity extends StarterActivity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         isAddToolBar = true;
         setContentView(R.layout.activity_main);
-        //Initial
-        //make sure the database is opened
-        if (!DBAdapter.getInstance().isOpen()) {
-            try {
-                Config config = new Config("jiaxiao.db", 1, this);
-                DBAdapter.getInstance().open(config);
-            } catch (IOException e) {
-                Log.e(getString(R.string.app_name), "Error opening the database", e);
-            } //try to open the database
-        } //check if the data base is opened
+
         if(!(boolean) SPUtils.get(mContext, "database_loading_complete", false)){
             new LoadTask().execute();
         }
@@ -81,7 +72,6 @@ public class MainActivity extends StarterActivity implements View.OnClickListene
         };
         drawerLayout.addDrawerListener(toggle);
         toggle.syncState();
-        toolbar.setBackgroundColor(getResources().getColor(R.color.main_tool_bar_bg));
 
         navView.setNavigationItemSelectedListener(this);
         //需要加上这一句才能显示图片的正确颜色
@@ -182,21 +172,31 @@ public class MainActivity extends StarterActivity implements View.OnClickListene
 
         @Override
         protected Void doInBackground(Void... params) {
-            Cursor c = DBAdapter.getInstance().getKeep();
-            if(c.moveToFirst()){
-                while (c.moveToNext()){
-                   addQuestion(c);
-                }
-            }
-            c.close();
-
-            Cursor quesCateCursor = DBAdapter.getInstance().getQuesCate();
-            if(quesCateCursor.moveToFirst()){
-                while (quesCateCursor.moveToNext()){
-                    addQuesCate(quesCateCursor);
-                }
-            }
-            quesCateCursor.close();
+//            Cursor c = DBAdapter.getInstance().getKeep();
+//            if(c.moveToFirst()){
+//                while (c.moveToNext()){
+//                   addQuestion(c);
+//                }
+//            }
+//            c.close();
+//
+//            Cursor quesCateCursor = DBAdapter.getInstance().getQuesCate();
+//            if(quesCateCursor.moveToFirst()){
+//                while (quesCateCursor.moveToNext()){
+//                    addQuesCate(quesCateCursor);
+//                }
+//            }
+//            quesCateCursor.close();
+            //Initial
+            //make sure the database is opened
+            if (!DBAdapter.getInstance().isOpen()) {
+                try {
+                    Config config = new Config("jiaxiaolit.db", 1, mContext);
+                    DBAdapter.getInstance().open(config);
+                } catch (IOException e) {
+                    Log.e(getString(R.string.app_name), "Error opening the database", e);
+                } //try to open the database
+            } //check if the data base is opened
             return null;
         }
 

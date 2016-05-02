@@ -56,8 +56,8 @@
         <string name="activity_name_notify_modify">修改提醒</string>
         <string name="activity_name_account_setting">账号设置</string>
         <string name="activity_name_rank">排名</string>
-        <string name="activity_name_about_app">关于八段锦</string>
-        <string name="activity_name_app">八段锦</string>
+        <string name="activity_name_about_app">关于驾校一点通</string>
+        <string name="activity_name_app">驾校一点通</string>
         <string name="activity_name_edit_share">编辑分享</string>
         <string name="activity_name_movement_break">动作分解</string>
         <string name="activity_name_movement_continue">继续锻炼</string>

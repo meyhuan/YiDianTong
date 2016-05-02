@@ -58,6 +58,6 @@
     <color name="main_tool_bar_bg">#C0C291</color>
 
     <color name="dark_jungle_green">#1E1E1E</color>
-    <color name="nav_status_bar_color">#9B9B75</color>
+    <color name="nav_status_bar_color">@color/colorPrimaryDark</color>
     <color name="color_trans_gray">#33000000</color>
 </resources>

@@ -2,7 +2,7 @@
 <resources>
     <style name="AppBaseTheme" parent="@android:style/Theme.Light" />
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -171,7 +171,7 @@
 
     <style name="TextStyle.Primary">
         <item name="android:textSize">18sp</item>
-        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:textColor">@color/white</item>
     </style>
 
     <style name="TextStyle.Dark">

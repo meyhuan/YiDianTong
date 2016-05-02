@@ -30,7 +30,7 @@ import com.iaraby.db.helper.DatabaseAdapter;
 
 /**
  * Example on best practice how to use DatabaseAdapter in the library
- * 
+ * https://github.com/Barqawiz/Database_Sqlite_Assets_Helper
  * @author Ahmad Barqawi
  * 
  */

@@ -19,7 +19,7 @@
     <application
         android:name=".App"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
+        android:icon="@drawable/logo"
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
@@ -32,6 +32,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
         <activity
             android:name=".ui.PreKnowledgeActivity"
             android:theme="@style/Theme.Design.NoActionBar">
@@ -62,6 +67,10 @@
         </activity>
         <activity
             android:name=".ui.LoginActivity"
+            android:theme="@style/Theme.Design.NoActionBar">
+        </activity>
+        <activity
+            android:name=".ui.RegisterByPhoneActivity"
             android:theme="@style/Theme.Design.NoActionBar">
         </activity>
     </application>

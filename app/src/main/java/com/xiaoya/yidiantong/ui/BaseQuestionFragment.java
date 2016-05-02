@@ -26,7 +26,7 @@ import java.io.IOException;
  * Date:   16/4/24
  * Email:  627655140@qq.com
  */
-public class BaseQuestionFragment extends StarterFragment{
+public class BaseQuestionFragment extends StarterFragment implements View.OnClickListener{
 
     private TextView tvQuestion;
     private ImageView ivImage;
@@ -57,12 +57,14 @@ public class BaseQuestionFragment extends StarterFragment{
     private ImageView btnGuessContract;
 
     public  Question mQuestion = new Question();
+    public  static boolean TYPE_SELECT = false;
     
     @Override
     public void setArguments(Bundle args) {
         super.setArguments(args);
         if(args != null){
             mQuestion = (Question) args.getSerializable("question");
+            TYPE_SELECT = args.getBoolean("type_select");
         }
     }
 
@@ -93,8 +95,12 @@ public class BaseQuestionFragment extends StarterFragment{
         }else {
             layoutOptiond.setVisibility(View.GONE);
         }
-        setCorrectOption(mQuestion.getRightOption());
+        if(TYPE_SELECT){
+            setCorrectOption(mQuestion.getRightOption());
+            layoutAnalysis.setVisibility(View.INVISIBLE);
+        }
         setMedia(mQuestion.getMedia_type(), mQuestion.getMedia_content());
+
     }
 
     private void setCorrectOption(String rightOption){
@@ -121,6 +127,54 @@ public class BaseQuestionFragment extends StarterFragment{
         }
     }
 
+    private void checkRight(String rightOption){
+        int ro = 1;
+        try{
+            ro = Integer.parseInt(rightOption);
+        }catch (Exception e){
+            LogUtils.e(e.toString());
+        }
+
+        switch (ro){
+            case 1:
+                tvOptionaIcon.setBackgroundResource(R.drawable.check_right);
+                break;
+            case 2:
+                tvOptionbIcon.setBackgroundResource(R.drawable.check_right);
+                break;
+            case 3:
+                tvOptioncIcon.setBackgroundResource(R.drawable.check_right);
+                break;
+            case 4:
+                tvOptiondIcon.setBackgroundResource(R.drawable.check_right);
+                break;
+        }
+    }
+
+    private void checkWrong(String wrongOption){
+        int ro = 1;
+        try{
+            ro = Integer.parseInt(wrongOption);
+        }catch (Exception e){
+            LogUtils.e(e.toString());
+        }
+
+        switch (ro){
+            case 1:
+                tvOptionaIcon.setBackgroundResource(R.drawable.check_error);
+                break;
+            case 2:
+                tvOptionbIcon.setBackgroundResource(R.drawable.check_error);
+                break;
+            case 3:
+                tvOptioncIcon.setBackgroundResource(R.drawable.check_error);
+                break;
+            case 4:
+                tvOptiondIcon.setBackgroundResource(R.drawable.check_error);
+                break;
+        }
+    }
+
     private void setMedia(int mediaType, String mediaContent){
         if(mediaType == 1){
             Bitmap bit = null;
@@ -133,6 +187,39 @@ public class BaseQuestionFragment extends StarterFragment{
             }
         }
     }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.layout_optiona:
+                handleOptionSelect(1);
+                break;
+            case R.id.layout_optionb:
+                handleOptionSelect(2);
+                break;
+            case R.id.layout_optionc:
+                handleOptionSelect(3);
+                break;
+            case R.id.layout_optiond:
+                handleOptionSelect(4);
+                break;
+        }
+
+    }
+
+    private void handleOptionSelect(int optionSelect){
+        checkWrong(String.valueOf(optionSelect));
+        checkRight(mQuestion.getRightOption());
+        layoutAnalysis.setVisibility(View.VISIBLE);
+        if(mQuestion.getRightOption().equals(String.valueOf(optionSelect))){
+
+        }else {
+
+        }
+        mQuestion.setYour_truck_answer(String.valueOf(optionSelect));
+        mQuestion.save();
+    }
+
 
     @Override
     protected int getFragmentLayout() {
@@ -167,5 +254,12 @@ public class BaseQuestionFragment extends StarterFragment{
         btnGuess = (ImageView) view.findViewById(R.id.btn_guess);
         btnGuessExtend = (ImageView) view.findViewById(R.id.btn_guess_extend);
         btnGuessContract = (ImageView) view.findViewById(R.id.btn_guess_contract);
+
+        layoutOptiona.setOnClickListener(this);
+        layoutOptionb.setOnClickListener(this);
+        layoutOptionc.setOnClickListener(this);
+        layoutOptiond.setOnClickListener(this);
     }
+
+
 }

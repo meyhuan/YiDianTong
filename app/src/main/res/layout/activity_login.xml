@@ -2,14 +2,14 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_bg">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
-        android:layout_gravity="bottom"
+        android:layout_gravity="center"
         android:orientation="vertical">
 
         <android.support.design.widget.TextInputLayout
@@ -46,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginTop="20dp"
-            android:background="@color/yellow"
+            android:background="@drawable/btn_select"
             android:layout_gravity="right"
             android:gravity="center"
             android:textColor="@android:color/white"
@@ -68,7 +68,7 @@
                 android:layout_gravity="left"
                 android:padding="5dp"
                 android:textSize="16sp"
-                android:textColor="@color/textColorGray"
+                android:textColor="@color/white"
                 android:text="@string/login_phone_register"/>
 
             <TextView
@@ -79,7 +79,7 @@
                 android:padding="5dp"
                 android:text="@string/login_forget_password"
                 android:textSize="16sp"
-                android:textColor="@color/textColorGray"/>
+                android:textColor="@color/white"/>
 
         </FrameLayout>
 

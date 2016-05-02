@@ -44,8 +44,9 @@ public class LoginActivity extends StarterNetworkActivity<BaseResponse> implemen
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        isAddToolBar = false;
+        isAddToolBar = true;
         setContentView(R.layout.activity_login);
+        toolbar.setTitle("用户登陆");
     }
 
     @Override
@@ -85,6 +86,7 @@ public class LoginActivity extends StarterNetworkActivity<BaseResponse> implemen
     @Override
     public void onClick(View view) {
         if(view.getId() == R.id.login_phone_register_btn){
+            startActivity(RegisterByPhoneActivity.class);
         }else if(view.getId() == R.id.login_confirm_register_btn){
             doLogin();
         }else if(view.getId() == R.id.login_forget_password_btn){
@@ -134,6 +136,7 @@ public class LoginActivity extends StarterNetworkActivity<BaseResponse> implemen
     @Override
     protected void setStatusBar() {
         StatusBarHelper.setColor(this, getResources().getColor(R.color.nav_status_bar_color));
+        toolbar.setBackgroundResource(R.color.colorPrimary);
     }
 
     @Override
