@@ -23,6 +23,7 @@ import okhttp3.logging.HttpLoggingInterceptor;
  */
 public class App extends StarterKitApp {
 
+    private static int currentSubject = 1;
 
     @Override
     public void onCreate() {
@@ -49,6 +50,13 @@ public class App extends StarterKitApp {
                 .build();
     }
 
+    public static void setCurrentSubject(int currentSubject) {
+        App.currentSubject = currentSubject;
+    }
+
+    public static int getCurrentSubject() {
+        return currentSubject;
+    }
 
     @Override
     public Account accountFromJson(String json) {

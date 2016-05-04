@@ -12,6 +12,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.smartydroid.android.starter.kit.app.StarterActivity;
+import com.xiaoya.yidiantong.App;
 import com.xiaoya.yidiantong.R;
 import com.xiaoya.yidiantong.model.QuestionCategory;
 
@@ -47,6 +48,7 @@ public class ZhentiStudyActivity extends StarterActivity implements AdapterView.
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Intent intent = new Intent(mContext, ZhentiStudyQesPagerActivity.class);
         intent.putExtra("QuestionCategory_ID", categoryList.get(position).getId());
+        intent.putExtra("is_practice",false);
         startActivity(intent);
     }
 
@@ -100,7 +102,11 @@ public class ZhentiStudyActivity extends StarterActivity implements AdapterView.
 
         @Override
         protected List<QuestionCategory> doInBackground(Void... params) {
-            return categoryList = DataSupport.where("kem = ?","1").find(QuestionCategory.class);
+            if(App.getCurrentSubject() == 1){
+                return categoryList = DataSupport.where("kem = ?","1").find(QuestionCategory.class);
+            }else {
+                return categoryList = DataSupport.where("kem = ?","4").find(QuestionCategory.class);
+            }
         }
 
         @Override

@@ -93,6 +93,7 @@
                             android:layout_gravity="top"
                             android:layout_marginTop="8.0dip"
                             android:background="@drawable/check_normal"
+                            android:textColor="@color/textColorDark"
                             android:gravity="center"
                             android:text="A" />
 
@@ -122,6 +123,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
                             android:layout_marginTop="8.0dip"
+                            android:textColor="@color/textColorDark"
                             android:background="@drawable/check_normal"
                             android:gravity="center"
                             android:text="B" />
@@ -152,6 +154,7 @@
                             android:layout_height="wrap_content"
                             android:layout_gravity="top"
                             android:layout_marginTop="10.0dip"
+                            android:textColor="@color/textColorDark"
                             android:background="@drawable/check_normal"
                             android:gravity="center"
                             android:text="C" />
@@ -184,6 +187,7 @@
                             android:layout_marginTop="10.0dip"
                             android:background="@drawable/check_normal"
                             android:gravity="center"
+                            android:textColor="@color/textColorDark"
                             android:text="D" />
 
                         <TextView

@@ -9,6 +9,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.smartydroid.android.starter.kit.app.StarterActivity;
+import com.xiaoya.yidiantong.App;
 import com.xiaoya.yidiantong.R;
 
 /**
@@ -40,13 +41,16 @@ public class SubjectIndexActivity extends StarterActivity implements View.OnClic
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_subject);
-        toolbar.setTitle("科目1");
+        if(App.getCurrentSubject() == 1){
+            toolbar.setTitle("科目1");
+        }else if(App.getCurrentSubject() == 4){
+            toolbar.setTitle("科目4");
+        }
     }
 
     @Override
     protected void setupViews() {
         assignViews();
-
     }
 
     @Override
@@ -66,7 +70,9 @@ public class SubjectIndexActivity extends StarterActivity implements View.OnClic
                 startActivity(TraficSignAndMarkCategoryActivity.class);
                 break;
             case R.id.layout_order_practice:
-
+                Intent practiceIntent = new Intent(mContext, ZhentiStudyQesPagerActivity.class);
+                practiceIntent.putExtra("is_practice",true);
+                startActivity(practiceIntent);
                 break;
             case R.id.layout_random_practice:
 

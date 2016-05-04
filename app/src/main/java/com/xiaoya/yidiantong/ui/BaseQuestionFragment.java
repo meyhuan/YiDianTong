@@ -15,6 +15,7 @@ import android.widget.TextView;
 import com.apkfuns.logutils.LogUtils;
 import com.smartydroid.android.starter.kit.app.StarterFragment;
 import com.xiaoya.yidiantong.R;
+import com.xiaoya.yidiantong.callback.QuesSelectCallback;
 import com.xiaoya.yidiantong.model.Question;
 import com.xiaoya.yidiantong.utils.AES;
 import com.xiaoya.yidiantong.view.ScrollTextView;
@@ -57,7 +58,8 @@ public class BaseQuestionFragment extends StarterFragment implements View.OnClic
     private ImageView btnGuessContract;
 
     public  Question mQuestion = new Question();
-    public  static boolean TYPE_SELECT = false;
+    private  boolean TYPE_SELECT = false;
+    private QuesSelectCallback mQuesSelectCallback;
     
     @Override
     public void setArguments(Bundle args) {
@@ -66,6 +68,9 @@ public class BaseQuestionFragment extends StarterFragment implements View.OnClic
             mQuestion = (Question) args.getSerializable("question");
             TYPE_SELECT = args.getBoolean("type_select");
         }
+    }
+    public void setmQuesSelectCallback(QuesSelectCallback quesSelectCallback){
+        this.mQuesSelectCallback = quesSelectCallback;
     }
 
     @Override
@@ -96,8 +101,10 @@ public class BaseQuestionFragment extends StarterFragment implements View.OnClic
             layoutOptiond.setVisibility(View.GONE);
         }
         if(TYPE_SELECT){
-            setCorrectOption(mQuestion.getRightOption());
             layoutAnalysis.setVisibility(View.INVISIBLE);
+        }else {
+            setTextVisible(false);
+            setCorrectOption(mQuestion.getRightOption());
         }
         setMedia(mQuestion.getMedia_type(), mQuestion.getMedia_content());
 
@@ -162,15 +169,19 @@ public class BaseQuestionFragment extends StarterFragment implements View.OnClic
         switch (ro){
             case 1:
                 tvOptionaIcon.setBackgroundResource(R.drawable.check_error);
+                tvOptionaIcon.setText(" ");
                 break;
             case 2:
                 tvOptionbIcon.setBackgroundResource(R.drawable.check_error);
+                tvOptionbIcon.setText(" ");
                 break;
             case 3:
                 tvOptioncIcon.setBackgroundResource(R.drawable.check_error);
+                tvOptioncIcon.setText(" ");
                 break;
             case 4:
                 tvOptiondIcon.setBackgroundResource(R.drawable.check_error);
+                tvOptiondIcon.setText(" ");
                 break;
         }
     }
@@ -193,15 +204,31 @@ public class BaseQuestionFragment extends StarterFragment implements View.OnClic
         switch (v.getId()){
             case R.id.layout_optiona:
                 handleOptionSelect(1);
+                if(mQuesSelectCallback != null){
+                    mQuesSelectCallback.selectOption(mQuestion, 1);
+                }
+                tvOptionaIcon.setText(" ");
                 break;
             case R.id.layout_optionb:
                 handleOptionSelect(2);
+                if(mQuesSelectCallback != null){
+                    mQuesSelectCallback.selectOption(mQuestion, 2);
+                }
+                tvOptionbIcon.setText(" ");
                 break;
             case R.id.layout_optionc:
                 handleOptionSelect(3);
+                if(mQuesSelectCallback != null){
+                    mQuesSelectCallback.selectOption(mQuestion, 3);
+                }
+                tvOptioncIcon.setText(" ");
                 break;
             case R.id.layout_optiond:
                 handleOptionSelect(4);
+                if(mQuesSelectCallback != null){
+                    mQuesSelectCallback.selectOption(mQuestion, 4);
+                }
+                tvOptiondIcon.setText(" ");
                 break;
         }
 
@@ -210,16 +237,30 @@ public class BaseQuestionFragment extends StarterFragment implements View.OnClic
     private void handleOptionSelect(int optionSelect){
         checkWrong(String.valueOf(optionSelect));
         checkRight(mQuestion.getRightOption());
+        layoutOptiona.setClickable(false);
+        layoutOptionb.setClickable(false);
+        layoutOptionc.setClickable(false);
+        layoutOptiond.setClickable(false);
         layoutAnalysis.setVisibility(View.VISIBLE);
         if(mQuestion.getRightOption().equals(String.valueOf(optionSelect))){
-
+            //标记为正确
+            mQuestion.setYour_small_answer("1");
         }else {
-
+            mQuestion.setYour_small_answer("0");
         }
         mQuestion.setYour_truck_answer(String.valueOf(optionSelect));
+        mQuestion.setYour_small_answer("0");
         mQuestion.save();
     }
 
+    private void setTextVisible(boolean visible){
+        if(!visible){
+            tvOptionaIcon.setText("");
+            tvOptionbIcon.setText("");
+            tvOptioncIcon.setText("");
+            tvOptiondIcon.setText("");
+        }
+    }
 
     @Override
     protected int getFragmentLayout() {
@@ -254,11 +295,12 @@ public class BaseQuestionFragment extends StarterFragment implements View.OnClic
         btnGuess = (ImageView) view.findViewById(R.id.btn_guess);
         btnGuessExtend = (ImageView) view.findViewById(R.id.btn_guess_extend);
         btnGuessContract = (ImageView) view.findViewById(R.id.btn_guess_contract);
-
-        layoutOptiona.setOnClickListener(this);
-        layoutOptionb.setOnClickListener(this);
-        layoutOptionc.setOnClickListener(this);
-        layoutOptiond.setOnClickListener(this);
+        if(TYPE_SELECT){
+            layoutOptiona.setOnClickListener(this);
+            layoutOptionb.setOnClickListener(this);
+            layoutOptionc.setOnClickListener(this);
+            layoutOptiond.setOnClickListener(this);
+        }
     }
 
 

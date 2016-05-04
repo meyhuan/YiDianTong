@@ -25,7 +25,7 @@
     <color name="error_te_bg">#ff28303b</color>
     <color name="subject_te_bg">#ff46b845</color>
     <color name="zhenti_size">#ffb6b6b6</color>
-    <color name="window_bg">#99000000</color>
+    <color name="window_bg">#E1F2F2</color>
     <color name="trafic_col">#ffd52611</color>
     <color name="trafic_content">#ff363636</color>
     <color name="white">#ffffffff</color>
@@ -45,7 +45,6 @@
     <color name="colorAccent">#CDDC39</color>
     <color name="windowBackground">#FFFFFF</color>
     <color name="windowBackgroundLight">#E1F2F2</color>
-
     <color name="colorPrimary_light">#FFCDD2</color>
     <color name="textColorPrimary">#212121</color>
     <color name="textColorSecondary">#727272</color>

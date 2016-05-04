@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+  <style name="ProgressLoadingTheme"
+      parent="Base.Theme.AppCompat.Light.Dialog">
+    <item name="android:windowBackground">@android:color/transparent</item>
+    <item name="android:windowCloseOnTouchOutside">false</item>
+    <item name="android:backgroundDimEnabled">true</item>
+  </style>
+
+  <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

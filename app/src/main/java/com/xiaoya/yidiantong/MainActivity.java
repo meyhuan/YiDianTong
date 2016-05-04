@@ -59,7 +59,6 @@ public class MainActivity extends StarterActivity implements View.OnClickListene
             new LoadTask().execute();
         }
 
-
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         navView = (NavigationView) findViewById(R.id.nav_view);
         setSupportActionBar(toolbar);
@@ -117,6 +116,7 @@ public class MainActivity extends StarterActivity implements View.OnClickListene
                 break;
 
             case R.id.main_layout_subject1:
+                App.setCurrentSubject(1);
                 startActivity(SubjectIndexActivity.class);
                 break;
 
@@ -129,6 +129,7 @@ public class MainActivity extends StarterActivity implements View.OnClickListene
                 break;
 
             case R.id.main_layout_subject4:
+                App.setCurrentSubject(4);
                 startActivity(SubjectIndexActivity.class);
                 break;
 
