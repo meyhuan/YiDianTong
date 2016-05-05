@@ -1,36 +1,196 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/main_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.android.cheyoohdriver.view.TitleBarLayout android:id="@id/title_layout" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" />
-    <LinearLayout android:orientation="vertical" android:id="@id/layout_simulation_rule" android:background="@drawable/simulation_exam_rule_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:layout_below="@id/title_layout">
-        <TextView android:textSize="25.0sp" android:textColor="@color/simulation_exam_bg1" android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="@string/app_name" />
-        <ImageView android:layout_gravity="center_horizontal" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:src="@drawable/simulation_exam_bg" android:scaleType="fitCenter" />
-        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="38.0dip">
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/simulation_exam_size_text" style="@style/simulation_exam_text_rule" />
-            <TextView android:id="@id/tv_simulation_exam_size" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/simulation_exam_size" style="@style/simulation_exam_text" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_background">
+
+    <LinearLayout
+        android:id="@id/layout_simulation_rule"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10.0dip"
+        android:background="@drawable/simulation_exam_rule_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8.0dip"
+            android:text="@string/app_name"
+            android:textColor="@color/simulation_exam_bg1"
+            android:textSize="25.0sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:scaleType="fitCenter"
+            android:src="@drawable/simulation_exam_bg"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="38.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/simulation_exam_text_rule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/simulation_exam_size_text" />
+
+            <TextView
+                android:id="@id/tv_simulation_exam_size"
+                style="@style/simulation_exam_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/simulation_exam_size" />
         </LinearLayout>
-        <View android:background="@drawable/question_analysis_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
-        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="38.0dip">
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/simulation_exam_time_text" style="@style/simulation_exam_text_rule" />
-            <TextView android:id="@id/tv_simulation_exam_time" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/simulation_exam_time" style="@style/simulation_exam_text" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@drawable/question_analysis_divider" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="38.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/simulation_exam_text_rule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/simulation_exam_time_text" />
+
+            <TextView
+                android:id="@id/tv_simulation_exam_time"
+                style="@style/simulation_exam_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/simulation_exam_time" />
         </LinearLayout>
-        <View android:background="@drawable/question_analysis_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
-        <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="38.0dip">
-            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/simulation_exam_rule_text" style="@style/simulation_exam_text_rule" />
-            <TextView android:id="@id/tv_simulation_exam_rule" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/simulation_exam_rule" style="@style/simulation_exam_text" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@drawable/question_analysis_divider" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="38.0dip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/simulation_exam_text_rule"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/simulation_exam_rule_text" />
+
+            <TextView
+                android:id="@id/tv_simulation_exam_rule"
+                style="@style/simulation_exam_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/simulation_exam_rule" />
         </LinearLayout>
-        <View android:background="@drawable/question_analysis_divider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
-        <TextView android:id="@id/tv_simulation_exam_tip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/simulation_exam_tip" style="@style/simulation_exam_text_tip" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1.0dip"
+            android:background="@drawable/question_analysis_divider" />
+
+        <TextView
+            android:id="@id/tv_simulation_exam_tip"
+            style="@style/simulation_exam_text_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/simulation_exam_tip" />
     </LinearLayout>
-    <LinearLayout android:orientation="vertical" android:id="@id/layout_exam_button" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/layout_simulation_rule">
-        <LinearLayout android:gravity="center_horizontal" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="20.0dip">
-            <Button android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/btn_simulation_exam" android:background="@drawable/btn_select" android:layout_width="wrap_content" android:layout_height="35.0dip" android:layout_marginLeft="15.0dip" android:layout_marginRight="10.0dip" android:text="@string/simulation_exam" android:layout_weight="0.5" />
-            <Button android:textSize="18.0sp" android:textColor="@color/white" android:id="@id/btn_simulation_undown" android:background="@drawable/btn_select" android:layout_width="wrap_content" android:layout_height="35.0dip" android:layout_marginLeft="10.0dip" android:layout_marginRight="15.0dip" android:text="@string/simulation_exam_undown" android:layout_weight="0.5" />
+
+    <LinearLayout
+        android:id="@id/layout_exam_button"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_simulation_rule"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20.0dip"
+            android:layout_marginTop="10.0dip"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@id/btn_simulation_exam"
+                android:layout_width="wrap_content"
+                android:layout_height="35.0dip"
+                android:layout_marginLeft="15.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_weight="0.5"
+                android:background="@drawable/btn_select"
+                android:text="@string/simulation_exam"
+                android:textColor="@color/white"
+                android:textSize="18.0sp" />
+
+            <Button
+                android:id="@id/btn_simulation_undown"
+                android:layout_width="wrap_content"
+                android:layout_height="35.0dip"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="15.0dip"
+                android:layout_weight="0.5"
+                android:background="@drawable/btn_select"
+                android:text="@string/simulation_exam_undown"
+                android:textColor="@color/white"
+                android:textSize="18.0sp" />
         </LinearLayout>
     </LinearLayout>
-    <LinearLayout android:orientation="vertical" android:background="@drawable/simulation_exam_record_bg" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/layout_exam_button">
-        <TextView android:textSize="18.0sp" android:textColor="@color/white" android:gravity="center" android:layout_gravity="center_horizontal" android:background="@drawable/simulation_exam_record_text_bg" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/exam_record" />
-        <TextView android:textSize="16.0sp" android:textColor="@color/question_analysis_color" android:gravity="center" android:layout_gravity="center_horizontal" android:id="@id/tv_no_exam_record" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/exam_no_record" />
-        <ListView android:id="@id/lv_exam_result_record" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:divider="@drawable/question_analysis_divider" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_exam_button"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginRight="10.0dip"
+        android:background="@drawable/simulation_exam_record_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/simulation_exam_record_text_bg"
+            android:gravity="center"
+            android:text="@string/exam_record"
+            android:textColor="@color/white"
+            android:textSize="18.0sp" />
+
+        <TextView
+            android:id="@id/tv_no_exam_record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10.0dip"
+            android:gravity="center"
+            android:text="@string/exam_no_record"
+            android:textColor="@color/question_analysis_color"
+            android:textSize="16.0sp" />
+
+        <ListView
+            android:id="@id/lv_exam_result_record"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:divider="@drawable/question_analysis_divider"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip" />
     </LinearLayout>
 </RelativeLayout>

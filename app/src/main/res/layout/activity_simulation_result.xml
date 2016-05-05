@@ -1,27 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout android:orientation="vertical" android:background="@color/main_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <include android:id="@id/layout_share" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="fill_parent" layout="@layout/layout_simulation_result_share" />
-    <LinearLayout android:orientation="vertical" android:background="@color/main_background" android:layout_width="fill_parent" android:layout_height="fill_parent">
-        <com.android.cheyoohdriver.view.TitleBarLayout android:id="@id/title_layout" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" />
-        <RelativeLayout android:background="@drawable/simulation_exam_rule_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip">
-            <ImageView android:id="@id/iv_user_head" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:src="@drawable/ic_user_head" android:layout_centerHorizontal="true" android:contentDescription="@null" />
-            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_score" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="5.0dip" android:layout_below="@id/iv_user_head">
-                <TextView android:textSize="20.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/simulation_exam_score_title" />
-                <TextView android:textSize="20.0sp" android:textColor="@color/color_60b347" android:id="@id/tv_score" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@id/layout_share"
+        layout="@layout/layout_simulation_result_share"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="invisible" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/main_background"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_margin="5.0dip"
+            android:background="@drawable/simulation_exam_rule_bg">
+
+            <ImageView
+                android:id="@id/iv_user_head"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10.0dip"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_user_head" />
+
+            <LinearLayout
+                android:id="@id/ll_score"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_user_head"
+                android:layout_marginBottom="5.0dip"
+                android:layout_marginTop="10.0dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/simulation_exam_score_title"
+                    android:textSize="20.0sp" />
+
+                <TextView
+                    android:id="@id/tv_score"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_60b347"
+                    android:textSize="20.0sp" />
             </LinearLayout>
-            <View android:id="@id/v_line" android:background="@color/color_ededed" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_below="@id/ll_score" />
-            <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/ll_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_below="@id/v_line">
-                <TextView android:textSize="20.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/simulation_exam_time_title" />
-                <TextView android:textSize="20.0sp" android:textColor="@color/color_60b347" android:id="@id/tv_time" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+            <View
+                android:id="@id/v_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0dip"
+                android:layout_below="@id/ll_score"
+                android:background="@color/color_ededed" />
+
+            <LinearLayout
+                android:id="@id/ll_time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/v_line"
+                android:layout_marginTop="5.0dip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/simulation_exam_time_title"
+                    android:textSize="20.0sp" />
+
+                <TextView
+                    android:id="@id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/color_60b347"
+                    android:textSize="20.0sp" />
             </LinearLayout>
-            <LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/ll_comment" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip" android:layout_marginBottom="30.0dip" android:layout_below="@id/ll_time">
-                <TextView android:textSize="18.0sp" android:textColor="@color/color_f83434" android:id="@id/tv_comment" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/about" />
-                <ImageView android:id="@id/iv_good" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/ic_comment_good" android:contentDescription="@null" />
+
+            <LinearLayout
+                android:id="@id/ll_comment"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_time"
+                android:layout_marginBottom="30.0dip"
+                android:layout_marginTop="20.0dip"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@id/tv_comment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/about"
+                    android:textColor="@color/color_f83434"
+                    android:textSize="18.0sp" />
+
+                <ImageView
+                    android:id="@id/iv_good"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:src="@drawable/ic_comment_good" />
             </LinearLayout>
-            <LinearLayout android:gravity="center" android:id="@id/ll_share" android:background="@drawable/btn_select" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" android:layout_below="@id/ll_comment">
-                <ImageView android:visibility="gone" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/score_share_selector" android:contentDescription="@null" />
-                <TextView android:textSize="16.0sp" android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/share" />
+
+            <LinearLayout
+                android:id="@id/ll_share"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/title_height"
+                android:layout_below="@id/ll_comment"
+                android:background="@drawable/btn_select"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@null"
+                    android:duplicateParentState="true"
+                    android:src="@drawable/score_share_selector"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share"
+                    android:textColor="@android:color/white"
+                    android:textSize="16.0sp" />
             </LinearLayout>
         </RelativeLayout>
     </LinearLayout>

@@ -73,6 +73,10 @@
             android:name=".ui.RegisterByPhoneActivity"
             android:theme="@style/Theme.Design.NoActionBar">
         </activity>
+        <activity
+            android:name=".ui.ErrorQuestionActivity"
+            android:theme="@style/Theme.Design.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

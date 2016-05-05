@@ -15,7 +15,9 @@ import com.xiaoya.yidiantong.model.Question;
 
 import org.litepal.crud.DataSupport;
 
+import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 import retrofit2.http.POST;
 
@@ -31,6 +33,8 @@ public class ZhentiStudyQesPagerActivity extends StarterActivity{
     private int questionCategoryID = 0;
     private int currentPageIndex = 0;
     private boolean isPractice = false;
+    private boolean isError = false;
+    private boolean isSimulation = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +42,9 @@ public class ZhentiStudyQesPagerActivity extends StarterActivity{
         setContentView(R.layout.activity_qeuestion_list);
         questionCategoryID = getIntent().getIntExtra("QuestionCategory_ID", 0);
         isPractice = getIntent().getBooleanExtra("is_practice", false);
+        isError = getIntent().getBooleanExtra("is_error", false);
+        isError = getIntent().getBooleanExtra("is_error", false);
+        isSimulation = getIntent().getBooleanExtra("is_simulation", false);
         new DataTask().execute();
     }
 
@@ -106,9 +113,18 @@ public class ZhentiStudyQesPagerActivity extends StarterActivity{
         protected List<Question> doInBackground(Void... params) {
             if(isPractice){
                 if(App.getCurrentSubject() == 1){
-                    return DataSupport.where("kem = ?","1").find(Question.class);
+                    if(isError){
+                        return DataSupport.where("kem = ? and your_small_answer = ?","1", "0").find(Question.class);
+                    }else {
+                        return DataSupport.where("kem = ?","1").find(Question.class);
+                    }
                 }else {
-                    return DataSupport.where("kem = ?","4").find(Question.class);
+                    if(isError){
+
+                        return DataSupport.where("kem = ? and your_small_answer = ?","4", "0").find(Question.class);
+                    }else {
+                        return DataSupport.where("kem = ?","4").find(Question.class);
+                    }
                 }
             }else {
                 if(App.getCurrentSubject() == 1){
@@ -122,7 +138,14 @@ public class ZhentiStudyQesPagerActivity extends StarterActivity{
 
         @Override
         protected void onPostExecute(List<Question> questions) {
-            super.onPostExecute(questions);
+            if(isPractice && isSimulation && !isError){
+                //随机取出一百道题目
+                Random random = new Random(System.currentTimeMillis());
+                Collections.shuffle(questions,random);
+                for (int i = 100; i < questions.size(); i ++){
+                    questions.remove(i);
+                }
+            }
             viewPager.setAdapter(new ViewPageAdapt(getSupportFragmentManager(), questions));
         }
     }

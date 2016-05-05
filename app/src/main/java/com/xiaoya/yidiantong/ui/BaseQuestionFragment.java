@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.apkfuns.logutils.LogUtils;
 import com.smartydroid.android.starter.kit.app.StarterFragment;
+import com.smartydroid.android.starter.kit.utilities.SPUtils;
 import com.xiaoya.yidiantong.R;
 import com.xiaoya.yidiantong.callback.QuesSelectCallback;
 import com.xiaoya.yidiantong.model.Question;
@@ -247,9 +248,10 @@ public class BaseQuestionFragment extends StarterFragment implements View.OnClic
             mQuestion.setYour_small_answer("1");
         }else {
             mQuestion.setYour_small_answer("0");
+            int error = (int) SPUtils.get(getActivity(), "error_question_count", 0);
+            SPUtils.put(getActivity(), "error_question_count",++error);
         }
         mQuestion.setYour_truck_answer(String.valueOf(optionSelect));
-        mQuestion.setYour_small_answer("0");
         mQuestion.save();
     }
 

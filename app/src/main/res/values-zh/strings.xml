@@ -44,192 +44,191 @@
     <string name="UMUpdateCheck">2.4.2.20140520</string>
 
 
+    <string name="cn_app_name">健身八段锦</string>
 
-        <string name="cn_app_name">健身八段锦</string>
-
-        <string name="navigation_drawer_open">打开侧边栏</string>
-        <string name="navigation_drawer_close">关闭侧边栏</string>
-
-
-        <string name="activity_name_notify">锻炼提醒</string>
-        <string name="activity_name_notify_add">新增提醒</string>
-        <string name="activity_name_notify_modify">修改提醒</string>
-        <string name="activity_name_account_setting">账号设置</string>
-        <string name="activity_name_rank">排名</string>
-        <string name="activity_name_about_app">关于驾校一点通</string>
-        <string name="activity_name_app">驾校一点通</string>
-        <string name="activity_name_edit_share">编辑分享</string>
-        <string name="activity_name_movement_break">动作分解</string>
-        <string name="activity_name_movement_continue">继续锻炼</string>
+    <string name="navigation_drawer_open">打开侧边栏</string>
+    <string name="navigation_drawer_close">关闭侧边栏</string>
 
 
-        <string name="about_baduanjing">关于八段锦</string>
-        <string name="about_us">关于我们</string>
-        <string name="uer_comment">用户评价</string>
-        <string name="comment">评论</string>
-        <string name="face_back">意见反馈</string>
-        <string name="setting">设置</string>
-        <string name="invite">邀请好友</string>
-        <string name="share">分享</string>
-        <string name="loading">加载中，请稍后..</string>
-        <string name="cancel">取消</string>
-        <string name="copy">复制</string>
-        <string name="success_copy">已经复制到剪切板</string>
-        <string name="confirm">确定</string>
+    <string name="activity_name_notify">锻炼提醒</string>
+    <string name="activity_name_notify_add">新增提醒</string>
+    <string name="activity_name_notify_modify">修改提醒</string>
+    <string name="activity_name_account_setting">账号设置</string>
+    <string name="activity_name_rank">排名</string>
+    <string name="activity_name_about_app">关于驾校一点通</string>
+    <string name="activity_name_app">驾校一点通</string>
+    <string name="activity_name_edit_share">编辑分享</string>
+    <string name="activity_name_movement_break">动作分解</string>
+    <string name="activity_name_movement_continue">继续锻炼</string>
 
 
-        <string name="main_movement_tip">提示：每天坚持锻炼，调养健康身体</string>
-        <string name="main_movement_break">动作分解</string>
-        <string name="main_movement_start">开始锻炼</string>
+    <string name="about_baduanjing">关于八段锦</string>
+    <string name="about_us">关于我们</string>
+    <string name="uer_comment">用户评价</string>
+    <string name="comment">评论</string>
+    <string name="face_back">意见反馈</string>
+    <string name="setting">设置</string>
+    <string name="invite">邀请好友</string>
+    <string name="share">分享</string>
+    <string name="loading">加载中，请稍后..</string>
+    <string name="cancel">取消</string>
+    <string name="copy">复制</string>
+    <string name="success_copy">已经复制到剪切板</string>
+    <string name="confirm">确定</string>
 
 
-        <string name="register_account">注册账号</string>
-        <string name="register_input_phone">请输入手机号</string>
-        <string name="register_input_valid_code">请输入验证码</string>
-        <string name="register_input_password">设置一个密码</string>
-        <string name="register_input_password_again">再一次输入密码</string>
-        <string name="register_show_password">显示密码</string>
-        <string name="register_commit">确认注册</string>
-        <string name="register_send_valid_code">发送验证码</string>
-        <string name="register_second">发送验证码</string>
-        <string name="register_send_fail">发送验证码失败</string>
-        <string name="register_code_error">验证码错误</string>
-        <string name="register_send_success">发送验证码成功</string>
-
-        <string name="register_input_empty_error">输入不能为空</string>
-        <string name="register_input_phone_error">输入手机号有误</string>
-        <string name="register_input_pw_error">密码不能小于6位</string>
-        <string name="register_input_valid_error">输入验证码有误</string>
-        <string name="register_input_valid_error2">两次密码不一致</string>
-        <string name="register_success">注册成功</string>
-        <string name="register_failed">注册失败</string>
-        <string name="register_again">重发</string>
-        <string name="register_change_pw_success">重发</string>
-        <string name="register_change_pw_fail">重发</string>
+    <string name="main_movement_tip">提示：每天坚持锻炼，调养健康身体</string>
+    <string name="main_movement_break">动作分解</string>
+    <string name="main_movement_start">开始锻炼</string>
 
 
-        <string name="forget_pw_name">修改密码</string>
-        <string name="forget_pw_confirm">确认修改</string>
-        <string name="forget_pw_fail">修改密码失败</string>
-        <string name="forget_pw_success">修改密码成功，请重新登陆</string>
+    <string name="register_account">注册账号</string>
+    <string name="register_input_phone">请输入手机号</string>
+    <string name="register_input_valid_code">请输入验证码</string>
+    <string name="register_input_password">设置一个密码</string>
+    <string name="register_input_password_again">再一次输入密码</string>
+    <string name="register_show_password">显示密码</string>
+    <string name="register_commit">确认注册</string>
+    <string name="register_send_valid_code">发送验证码</string>
+    <string name="register_second">发送验证码</string>
+    <string name="register_send_fail">发送验证码失败</string>
+    <string name="register_code_error">验证码错误</string>
+    <string name="register_send_success">发送验证码成功</string>
 
-        <string name="login_input_user_name">请输入用户名</string>
-        <string name="login_input_password">请输入密码</string>
-        <string name="login_phone_register">手机注册</string>
-        <string name="login">登陆</string>
-        <string name="login_or_register">登陆/注册</string>
-        <string name="login_forget_password">忘记密码？</string>
-        <string name="login_other_way">其他方式登陆</string>
-        <string name="login_wx">微信</string>
-        <string name="login_qq">QQ</string>
-        <string name="login_sina">新浪微博</string>
-        <string name="login_success">登陆成功</string>
-        <string name="login_fail">登陆失败</string>
-        <string name="login_get_user_info_fail">获取用户信息失败</string>
-        <string name="login_get_user_info_success">获取用户信息成功</string>
-
-
-        <string name="setting_avatar">头像</string>
-        <string name="setting_account">账号</string>
-        <string name="setting_nickname">昵称</string>
-        <string name="setting_gender">性别</string>
-        <string name="setting_women">女</string>
-        <string name="setting_man">男</string>
-        <string name="setting_gender_unknow">未选</string>
-        <string name="setting_exit_account">退出当前账号</string>
-        <string name="setting_is_exit_account">是否退出当前账号？</string>
-        <string name="setting_set_nickname">设置昵称</string>
-        <string name="setting_input_nickname">输入昵称</string>
-        <string name="setting_avatar_select">上传头像</string>
-        <string name="setting_form_take_photo">拍照上传</string>
-        <string name="setting_from_album">图库上传</string>
-        <string name="setting_toast_nick_name_err">输入的昵称不能为空</string>
-        <string name="setting_toast_user_id_not_modify">账号不可以修改哦</string>
+    <string name="register_input_empty_error">输入不能为空</string>
+    <string name="register_input_phone_error">输入手机号有误</string>
+    <string name="register_input_pw_error">密码不能小于6位</string>
+    <string name="register_input_valid_error">输入验证码有误</string>
+    <string name="register_input_valid_error2">两次密码不一致</string>
+    <string name="register_success">注册成功</string>
+    <string name="register_failed">注册失败</string>
+    <string name="register_again">重发</string>
+    <string name="register_change_pw_success">重发</string>
+    <string name="register_change_pw_fail">重发</string>
 
 
-        <string name="main_notification">锻炼提醒</string>
-        <string name="main_rank">排名榜</string>
-        <string name="main_jifen">我的积分</string>
-        <string name="not_login_tip">该功能只有登录了才能看哦</string>
+    <string name="forget_pw_name">修改密码</string>
+    <string name="forget_pw_confirm">确认修改</string>
+    <string name="forget_pw_fail">修改密码失败</string>
+    <string name="forget_pw_success">修改密码成功，请重新登陆</string>
 
-        <string name="notify_meridiem_ante">上午</string>
-        <string name="notify_meridiem_psot">下午</string>
-        <string name="notify_day_monday">一</string>
-        <string name="notify_day_tuesday">二</string>
-        <string name="notify_day_wednesday">三</string>
-        <string name="notify_day_thursday">四</string>
-        <string name="notify_day_friday">五</string>
-        <string name="notify_day_saturday">六</string>
-        <string name="notify_day_sunday">日</string>
-
-        <string name="notify_more_ten_item_tip">"最多只能设置10个提醒哦"</string>
-        <string name="notify_add_first_tip">"强身健体，坚持锻炼，一天两次最佳"</string>
-        <string name="not_login_tip1">登录后，实时记录自己的锻炼过程</string>
-        <string name="not_login_tip2">登录后，查看八段锦的锻炼PK排行榜</string>
-        <string name="not_wifi">在wifi联网下，锻炼最佳</string>
-
-        <string name="notify_mod_right">确认</string>
-        <string name="notify_mod_delete">删除</string>
-        <string name="notify_mod_set_time">设置时间</string>
-
-        <string name="alarm_default_label">"健身祛病，八段锦锻炼提醒"</string>
-        <string name="alarm_every_day">"每天"</string>
-        <string name="alarm_never">"仅一次"</string>
-        <string name="alarm_day_concat">"、"</string>
-
-        <string name="complete_dialog_count_tip"><![CDATA[恭喜你完成第<font color="#F6FB69">%1$d</font>次的锻炼]]></string>
-        <string name="share_content_tip">八段锦-一款新的健身减肥轻运动</string>
-        <string name="share_title_tip"><![CDATA[坚持锻炼八段锦，我已经完成锻炼%1$d次，你也来吧！]]></string>
+    <string name="login_input_user_name">请输入用户名</string>
+    <string name="login_input_password">请输入密码</string>
+    <string name="login_phone_register">手机注册</string>
+    <string name="login">登陆</string>
+    <string name="login_or_register">登陆/注册</string>
+    <string name="login_forget_password">忘记密码？</string>
+    <string name="login_other_way">其他方式登陆</string>
+    <string name="login_wx">微信</string>
+    <string name="login_qq">QQ</string>
+    <string name="login_sina">新浪微博</string>
+    <string name="login_success">登陆成功</string>
+    <string name="login_fail">登陆失败</string>
+    <string name="login_get_user_info_fail">获取用户信息失败</string>
+    <string name="login_get_user_info_success">获取用户信息成功</string>
 
 
-        <string name="complete_dialog_add_time">"<![CDATA[+%1$d &nbsp;min ]]>"</string>
-        <string name="complete_dialog_go_rank">"<![CDATA[排行榜 &nbsp;>>]]>"</string>
-        <string name="complete_dialog_close">"关闭"</string>
-        <string name="complete_dialog_share">"分享好友"</string>
+    <string name="setting_avatar">头像</string>
+    <string name="setting_account">账号</string>
+    <string name="setting_nickname">昵称</string>
+    <string name="setting_gender">性别</string>
+    <string name="setting_women">女</string>
+    <string name="setting_man">男</string>
+    <string name="setting_gender_unknow">未选</string>
+    <string name="setting_exit_account">退出当前账号</string>
+    <string name="setting_is_exit_account">是否退出当前账号？</string>
+    <string name="setting_set_nickname">设置昵称</string>
+    <string name="setting_input_nickname">输入昵称</string>
+    <string name="setting_avatar_select">上传头像</string>
+    <string name="setting_form_take_photo">拍照上传</string>
+    <string name="setting_from_album">图库上传</string>
+    <string name="setting_toast_nick_name_err">输入的昵称不能为空</string>
+    <string name="setting_toast_user_id_not_modify">账号不可以修改哦</string>
 
-        <string name="feedback">意见反馈</string>
 
-        <string name="alarm_dialog_tip1">健身祛病，八段锦锻炼提醒</string>
-        <string name="alarm_dialog_start">开始</string>
-        <string name="alarm_dialog_close">关闭</string>
+    <string name="main_notification">锻炼提醒</string>
+    <string name="main_rank">排名榜</string>
+    <string name="main_jifen">我的积分</string>
+    <string name="not_login_tip">该功能只有登录了才能看哦</string>
 
-        <string name="edit_share_content">"消减失眠棒棒的！"</string>
-        <string name="edit_share_complete_times">"<![CDATA[完成了第<font color="#27A59B">%1$d</font>次八段锦]]>"</string>
+    <string name="notify_meridiem_ante">上午</string>
+    <string name="notify_meridiem_psot">下午</string>
+    <string name="notify_day_monday">一</string>
+    <string name="notify_day_tuesday">二</string>
+    <string name="notify_day_wednesday">三</string>
+    <string name="notify_day_thursday">四</string>
+    <string name="notify_day_friday">五</string>
+    <string name="notify_day_saturday">六</string>
+    <string name="notify_day_sunday">日</string>
 
-        <string name="about_app_title">"【八段锦】"</string>
-        <string name="about_app_content">"\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020八段锦轻运动是由传统文化整合传播平台——灵机文化打造的一款中医养生产品，并获得香港“亚太中研究院”著名中医师王德利先生的专业指导，对动作进行专业分解，为用户提供权威的动作指导。\n\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020八段锦起源于北宋，至今共八百多年的历史。古人把这套动作比喻为“锦”，意为五颜六色，美而华贵！体现其动作舒展优美，视其为”祛病健身，效果极好，编排精致，动作完美“。\n\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020锻炼八段锦能改善神经体液调节功能和加强血液循环，对腹腔脏器有柔和的按摩作用，对神经系统、心血管系统、消化系统、呼吸系统及运动器官都有良好的调节作用，达到强身健体的功效。练习无需器械，无需场地，简单易学，节省时间，作用极其显著；效果适合于男女老少，可使瘦者健壮，肥者减肥。\n\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020八段锦为传统医学中导引按跷中绚丽多彩之瑰宝。一般有八节，锦者，誉其似锦之柔和优美。正如明朝高濂在其所著《遵生八笺》中“八段锦导引法”所讲：“子后午前做，造化合乾坤。循环次第转，八卦是良因。”“锦”字，是由“金”“帛”组成，以表示其精美华贵。除此之外，“锦”字还可理解为单个导引术式的汇集，如丝锦那样连绵不断，是一套完整的健身方法。"</string>
+    <string name="notify_more_ten_item_tip">"最多只能设置10个提醒哦"</string>
+    <string name="notify_add_first_tip">"强身健体，坚持锻炼，一天两次最佳"</string>
+    <string name="not_login_tip1">登录后，实时记录自己的锻炼过程</string>
+    <string name="not_login_tip2">登录后，查看八段锦的锻炼PK排行榜</string>
+    <string name="not_wifi">在wifi联网下，锻炼最佳</string>
 
-        <string name="pw_error">密码错误</string>
-        <string name="pw_is_not_empty">密码不能为空</string>
-        <string name="user_not_exist">用户不存在</string>
-        <string name="user_existed">用户已存在</string>
-        <string name="user_name_not_empty">用户名不能为空</string>
-        <string name="user_reset_fail">设置失败</string>
-        <string name="user_reset_success">设置成功</string>
-        <string name="net_error">网络错误</string>
-        <string name="json_format_error">数据解析错误</string>
-        <string name="unknow_error">未知错误</string>
-        <string name="un_stall_wx">请安装微信客户端</string>
-        <string name="exit_tip">是否退出应用？</string>
-        <string name="minute">分钟</string>
-        <string name="not_set_alarm">未设置八段锦锻炼提醒</string>
-        <string name="network_unavailable">网络未连接，请检查后重试！</string>
-        <string name="share_more">更多</string>
+    <string name="notify_mod_right">确认</string>
+    <string name="notify_mod_delete">删除</string>
+    <string name="notify_mod_set_time">设置时间</string>
 
-        <string name="my_rank"><![CDATA[我的排名：<font color="#F8FA9B">%s</font>]]></string>
+    <string name="alarm_default_label">"健身祛病，八段锦锻炼提醒"</string>
+    <string name="alarm_every_day">"每天"</string>
+    <string name="alarm_never">"仅一次"</string>
+    <string name="alarm_day_concat">"、"</string>
 
-        <string-array name="days">
-            <item>周日</item>
-            <item>周一</item>
-            <item>周二</item>
-            <item>周三</item>
-            <item>周四</item>
-            <item>周五</item>
-            <item>周六</item>
-        </string-array>
+    <string name="complete_dialog_count_tip"><![CDATA[恭喜你完成第<font color="#F6FB69">%1$d</font>次的锻炼]]></string>
+    <string name="share_content_tip">八段锦-一款新的健身减肥轻运动</string>
+    <string name="share_title_tip"><![CDATA[坚持锻炼八段锦，我已经完成锻炼%1$d次，你也来吧！]]></string>
 
-        <!-- TODO: Remove or change this placeholder text -->
-        <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="complete_dialog_add_time">"<![CDATA[+%1$d &nbsp;min ]]>"</string>
+    <string name="complete_dialog_go_rank">"<![CDATA[排行榜 &nbsp;>>]]>"</string>
+    <string name="complete_dialog_close">"关闭"</string>
+    <string name="complete_dialog_share">"分享好友"</string>
+
+    <string name="feedback">意见反馈</string>
+
+    <string name="alarm_dialog_tip1">健身祛病，八段锦锻炼提醒</string>
+    <string name="alarm_dialog_start">开始</string>
+    <string name="alarm_dialog_close">关闭</string>
+
+    <string name="edit_share_content">"消减失眠棒棒的！"</string>
+    <string name="edit_share_complete_times">"<![CDATA[完成了第<font color="#27A59B">%1$d</font>次八段锦]]>"</string>
+
+    <string name="about_app_title">"【八段锦】"</string>
+    <string name="about_app_content">"\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020八段锦轻运动是由传统文化整合传播平台——灵机文化打造的一款中医养生产品，并获得香港“亚太中研究院”著名中医师王德利先生的专业指导，对动作进行专业分解，为用户提供权威的动作指导。\n\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020八段锦起源于北宋，至今共八百多年的历史。古人把这套动作比喻为“锦”，意为五颜六色，美而华贵！体现其动作舒展优美，视其为”祛病健身，效果极好，编排精致，动作完美“。\n\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020锻炼八段锦能改善神经体液调节功能和加强血液循环，对腹腔脏器有柔和的按摩作用，对神经系统、心血管系统、消化系统、呼吸系统及运动器官都有良好的调节作用，达到强身健体的功效。练习无需器械，无需场地，简单易学，节省时间，作用极其显著；效果适合于男女老少，可使瘦者健壮，肥者减肥。\n\u0020\u0020\u0020\u0020\u0020\u0020\u0020\u0020八段锦为传统医学中导引按跷中绚丽多彩之瑰宝。一般有八节，锦者，誉其似锦之柔和优美。正如明朝高濂在其所著《遵生八笺》中“八段锦导引法”所讲：“子后午前做，造化合乾坤。循环次第转，八卦是良因。”“锦”字，是由“金”“帛”组成，以表示其精美华贵。除此之外，“锦”字还可理解为单个导引术式的汇集，如丝锦那样连绵不断，是一套完整的健身方法。"</string>
+
+    <string name="pw_error">密码错误</string>
+    <string name="pw_is_not_empty">密码不能为空</string>
+    <string name="user_not_exist">用户不存在</string>
+    <string name="user_existed">用户已存在</string>
+    <string name="user_name_not_empty">用户名不能为空</string>
+    <string name="user_reset_fail">设置失败</string>
+    <string name="user_reset_success">设置成功</string>
+    <string name="net_error">网络错误</string>
+    <string name="json_format_error">数据解析错误</string>
+    <string name="unknow_error">未知错误</string>
+    <string name="un_stall_wx">请安装微信客户端</string>
+    <string name="exit_tip">是否退出应用？</string>
+    <string name="minute">分钟</string>
+    <string name="not_set_alarm">未设置八段锦锻炼提醒</string>
+    <string name="network_unavailable">网络未连接，请检查后重试！</string>
+    <string name="share_more">更多</string>
+
+    <string name="my_rank"><![CDATA[我的排名：<font color="#F8FA9B">%s</font>]]></string>
+
+    <string-array name="days">
+        <item>周日</item>
+        <item>周一</item>
+        <item>周二</item>
+        <item>周三</item>
+        <item>周四</item>
+        <item>周五</item>
+        <item>周六</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>
