@@ -18,6 +18,7 @@
             android:layout_marginRight="10.0dip"
             android:background="@drawable/subject_layout_bg"
             android:orientation="vertical"
+            android:visibility="gone"
             android:paddingBottom="1.0dip">
 
             <ImageView
@@ -167,6 +168,7 @@
                 style="@style/subject_layout"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:background="@drawable/layout_select">
 
                 <TextView
@@ -284,6 +286,7 @@
                 style="@style/subject_layout"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:background="@drawable/layout_select">
 
                 <TextView
@@ -321,6 +324,7 @@
                 style="@style/subject_layout"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:background="@drawable/layout_select">
 
                 <TextView

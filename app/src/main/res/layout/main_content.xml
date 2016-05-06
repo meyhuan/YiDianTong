@@ -16,6 +16,7 @@
         android:gravity="center_vertical"
         android:background="@drawable/action_item_bg"
         android:clickable="true"
+        android:visibility="gone"
         android:orientation="horizontal">
         <ImageView
             
@@ -268,6 +269,7 @@
         android:gravity="center_vertical"
         android:background="@drawable/action_item_bg"
         android:clickable="true"
+        android:visibility="gone"
         android:orientation="horizontal">
         <ImageView
             
@@ -319,6 +321,7 @@
         android:gravity="center_vertical"
         android:background="@drawable/action_item_bg"
         android:clickable="true"
+        android:visibility="gone"
         android:orientation="horizontal">
         <ImageView
             

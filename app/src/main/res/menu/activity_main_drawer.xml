@@ -4,10 +4,7 @@
     <group android:checkableBehavior="none">
         <item
             android:id="@+id/nav_about_bdj"
-            android:title="@string/about_baduanjing" />
-        <item
-            android:id="@+id/nav_about_us"
-            android:title="@string/about_us" />
+            android:title="@string/app_name" />
         <item
             android:id="@+id/nav_comment"
             android:title="@string/uer_comment" />

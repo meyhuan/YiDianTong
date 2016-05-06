@@ -154,7 +154,6 @@ public class MainActivity extends StarterActivity implements View.OnClickListene
         // Handle navigation view item clicks here.
         int id = item.getItemId();
         if (id == R.id.nav_about_bdj) {
-        } else if (id == R.id.nav_about_us) {
         } else if (id == R.id.nav_fb) {
         } else if (id == R.id.nav_comment) {
         } else if (id == R.id.nav_setting) {
