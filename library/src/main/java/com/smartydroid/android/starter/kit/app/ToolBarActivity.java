@@ -64,5 +64,11 @@ public abstract class ToolBarActivity extends AppCompatActivity {
         Toast.makeText(this, getString(resId), Toast.LENGTH_LONG).show();
     }
 
+    public void showToastShort(String msg){
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
+    }
+    public void showToastLong(String msg){
+        Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
+    }
 
 }

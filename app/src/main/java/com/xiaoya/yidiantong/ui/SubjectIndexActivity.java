@@ -81,7 +81,7 @@ public class SubjectIndexActivity extends StarterActivity implements View.OnClic
                 startActivity(ErrorQuestionActivity.class);
                 break;
             case R.id.layout_simulation_test:
-
+                startActivity(SimulationExamActivity.class);
                 break;
             case R.id.layout_week_exam:
 

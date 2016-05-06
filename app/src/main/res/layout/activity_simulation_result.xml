@@ -47,6 +47,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/simulation_exam_score_title"
+                    android:textColor="@color/textColorDark"
                     android:textSize="20.0sp" />
 
                 <TextView
@@ -77,6 +78,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/simulation_exam_time_title"
+                    android:textColor="@color/textColorDark"
                     android:textSize="20.0sp" />
 
                 <TextView

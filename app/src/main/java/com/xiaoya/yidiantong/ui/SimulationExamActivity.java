@@ -39,7 +39,7 @@ public class SimulationExamActivity extends StarterActivity implements View.OnCl
     protected void setupViews() {
         assignViews();
         tvSimulationExamSize.setText(String.format(Locale.CHINA, getResources().getString(R.string.simulation_exam_size), 100));
-        tvSimulationExamTime.setText(String.format(Locale.CHINA, getResources().getString(R.string.simulation_exam_time), 100));
+        tvSimulationExamTime.setText(String.format(Locale.CHINA, getResources().getString(R.string.simulation_exam_time), 45));
         tvSimulationExamTip.setText(String.format(Locale.CHINA, getResources().getString(R.string.simulation_exam_tip), 10));
     }
 
@@ -68,6 +68,9 @@ public class SimulationExamActivity extends StarterActivity implements View.OnCl
         btnSimulationUndown = (Button) findViewById(R.id.btn_simulation_undown);
         tvNoExamRecord = (TextView) findViewById(R.id.tv_no_exam_record);
         lvExamResultRecord = (ListView) findViewById(R.id.lv_exam_result_record);
+
+        btnSimulationExam.setOnClickListener(this);
+        btnSimulationUndown.setOnClickListener(this);
     }
 
 
