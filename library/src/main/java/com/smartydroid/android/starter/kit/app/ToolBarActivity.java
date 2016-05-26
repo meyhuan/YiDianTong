@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import com.smartydroid.android.starter.kit.R;
@@ -69,6 +70,15 @@ public abstract class ToolBarActivity extends AppCompatActivity {
     }
     public void showToastLong(String msg){
         Toast.makeText(this, msg, Toast.LENGTH_LONG).show();
+    }
+
+    public void hintToolBar(){
+        mToolBarHelper.hintToolBar();
+    }
+
+    public void showToolBar(){
+        mToolBarHelper.showToolBar();
+        toolbar.setVisibility(View.VISIBLE);
     }
 
 }

@@ -1,34 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:background="@color/main_background" android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.android.cheyoohdriver.view.TitleBarLayout android:id="@id/title_layout" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" />
-    <RelativeLayout android:id="@id/rl_video_layout" android:layout_width="fill_parent" android:layout_height="160.0dip" android:layout_margin="5.0dip" android:layout_below="@id/title_layout">
-        <com.android.cheyoohdriver.view.StretchVideoView android:id="@id/vv" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_alignParentLeft="true" android:layout_alignParentTop="true" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
-        <ImageView android:layout_gravity="center" android:id="@id/iv_default" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" android:contentDescription="@null" />
-        <ImageView android:id="@id/iv_fullscreen" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="5.0dip" android:src="@drawable/open_full_screen_selector" android:scaleType="fitCenter" android:layout_above="@id/fl_time" android:layout_alignParentRight="true" android:contentDescription="@null" />
-        <TextView android:textSize="20.0sp" android:textColor="@color/white" android:gravity="center" android:id="@id/tv_title" android:background="#50000000" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/title_height" android:layout_alignParentTop="true" />
-        <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/ll_download" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true">
-            <ImageView android:id="@id/iv_play_pause" android:duplicateParentState="true" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/download_selector" android:scaleType="fitCenter" android:contentDescription="@null" />
-            <TextView android:textSize="17.0sp" android:textStyle="bold" android:textColor="@color/white" android:gravity="left" android:layout_gravity="center" android:id="@id/tv_download_tip" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/download_tip" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/main_background">
+
+    <RelativeLayout
+        android:id="@id/rl_video_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="160.0dip"
+        android:layout_margin="5.0dip">
+
+        <com.xiaoya.yidiantong.view.StretchVideoView
+            android:id="@id/vv"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true" />
+
+        <ImageView
+            android:id="@id/iv_default"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:contentDescription="@null"
+            android:scaleType="fitXY" />
+
+        <ImageView
+            android:id="@id/iv_fullscreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_above="@id/fl_time"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5.0dip"
+            android:contentDescription="@null"
+            android:scaleType="fitCenter"
+            android:src="@drawable/open_full_screen_selector" />
+
+        <TextView
+            android:id="@id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/title_height"
+            android:layout_alignParentTop="true"
+            android:background="#50000000"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="20.0sp"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@id/ll_download"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@id/iv_play_pause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@null"
+                android:duplicateParentState="true"
+                android:scaleType="fitCenter"
+                android:src="@drawable/download_selector" />
+
+            <TextView
+                android:id="@id/tv_download_tip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="left"
+                android:paddingLeft="10.0dip"
+                android:text="@string/download_tip"
+                android:textColor="@color/white"
+                android:textSize="17.0sp"
+                android:textStyle="bold" />
         </LinearLayout>
-        <ProgressBar android:id="@id/pb_waiting" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" />
-        <FrameLayout android:id="@id/fl_time" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true">
-            <ProgressBar android:id="@id/pb_progress" android:layout_width="fill_parent" android:layout_height="fill_parent" android:max="100" android:progress="0" style="@style/progressBarHorizontal2" />
-            <TextView android:textColor="@color/white" android:gravity="left" android:layout_gravity="left" android:id="@id/tv_size" android:paddingLeft="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
-            <TextView android:textColor="@color/white" android:gravity="right" android:layout_gravity="right" android:id="@id/tv_time" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+
+        <ProgressBar
+            android:id="@id/pb_waiting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone" />
+
+        <FrameLayout
+            android:id="@id/fl_time"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <ProgressBar
+                android:id="@id/pb_progress"
+                style="@style/progressBarHorizontal2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:max="100"
+                android:progress="0" />
+
+            <TextView
+                android:id="@id/tv_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:paddingLeft="10.0dip"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@id/tv_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:gravity="right"
+                android:paddingRight="10.0dip"
+                android:textColor="@color/white" />
         </FrameLayout>
     </RelativeLayout>
-    <ScrollView android:id="@id/sv_layout" android:paddingBottom="10.0dip" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_below="@id/rl_video_layout">
-        <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
-            <TextView android:textSize="18.0sp" android:textColor="#ff46b845" android:id="@id/tv_request" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/pass_request" android:layout_alignParentLeft="true" />
-            <TextView android:textSize="16.0sp" android:id="@id/tv_request_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/pass_request" android:layout_below="@id/tv_request" android:layout_alignParentLeft="true" android:lineSpacingExtra="5.0dip" />
-            <TextView android:textSize="20.0sp" android:textColor="#ff46b845" android:id="@id/tv_criterion" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:text="@string/pass_criterion" android:layout_below="@id/tv_request_content" android:layout_alignParentLeft="true" />
-            <TextView android:textSize="16.0sp" android:id="@id/tv_criterion_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="@string/pass_criterion" android:layout_below="@id/tv_criterion" android:layout_alignParentLeft="true" android:lineSpacingExtra="5.0dip" />
-            <LinearLayout android:orientation="vertical" android:background="@drawable/strategy_layout_bg" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="40.0dip" android:layout_marginRight="10.0dip" android:layout_below="@id/tv_criterion_content">
-                <ImageView android:gravity="center" android:id="@id/tv_strategy" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/icon_raiders" android:scaleType="fitXY" />
-                <TextView android:textSize="16.0sp" android:textColor="#ff828282" android:id="@id/tv_strategy_content" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="@string/pass_strategy" android:lineSpacingExtra="5.0dip" />
+
+    <ScrollView
+        android:id="@id/sv_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rl_video_layout"
+        android:paddingBottom="10.0dip"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@id/tv_request"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_margin="10.0dip"
+                android:text="@string/pass_request"
+                android:textColor="#ff46b845"
+                android:textSize="18.0sp" />
+
+            <TextView
+                android:id="@id/tv_request_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/tv_request"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:lineSpacingExtra="5.0dip"
+                android:text="@string/pass_request"
+                android:textSize="16.0sp" />
+
+            <TextView
+                android:id="@id/tv_criterion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/tv_request_content"
+                android:layout_margin="10.0dip"
+                android:text="@string/pass_criterion"
+                android:textColor="#ff46b845"
+                android:textSize="20.0sp" />
+
+            <TextView
+                android:id="@id/tv_criterion_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/tv_criterion"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:lineSpacingExtra="5.0dip"
+                android:text="@string/pass_criterion"
+                android:textSize="16.0sp" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_criterion_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:layout_marginTop="40.0dip"
+                android:background="@drawable/strategy_layout_bg"
+                android:orientation="vertical"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip">
+
+                <ImageView
+                    android:id="@id/tv_strategy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/icon_raiders" />
+
+                <TextView
+                    android:id="@id/tv_strategy_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10.0dip"
+                    android:lineSpacingExtra="5.0dip"
+                    android:text="@string/pass_strategy"
+                    android:textColor="#ff828282"
+                    android:textSize="16.0sp" />
             </LinearLayout>
         </RelativeLayout>
     </ScrollView>
-    <com.android.cheyoohdriver.view.LoadingView android:id="@id/loading_view_layout" android:background="@color/white" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/title_layout" />
 </RelativeLayout>

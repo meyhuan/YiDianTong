@@ -2,6 +2,8 @@ package com.xiaoya.yidiantong;
 
 import android.content.Intent;
 import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.drawable.BitmapDrawable;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -9,6 +11,7 @@ import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
+import android.text.TextUtils;
 import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -18,22 +21,39 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
 import com.iaraby.db.helper.Config;
+import com.smartydroid.android.starter.kit.account.AccountManager;
 import com.smartydroid.android.starter.kit.app.StarterActivity;
+import com.smartydroid.android.starter.kit.app.StarterNetworkActivity;
+import com.smartydroid.android.starter.kit.helper.GlideRoundTransform;
+import com.smartydroid.android.starter.kit.utilities.ACache;
+import com.smartydroid.android.starter.kit.utilities.ImageUtils;
 import com.smartydroid.android.starter.kit.utilities.SPUtils;
 import com.smartydroid.android.starter.kit.utilities.Utils;
+import com.smartydroid.android.starter.kit.utilities.ViewUtils;
+import com.xiaoya.yidiantong.api.ApiService;
 import com.xiaoya.yidiantong.database.DBAdapter;
 import com.xiaoya.yidiantong.model.Question;
 import com.xiaoya.yidiantong.model.QuestionCategory;
+import com.xiaoya.yidiantong.model.User;
+import com.xiaoya.yidiantong.model.UserInfo;
 import com.xiaoya.yidiantong.ui.LoginActivity;
 import com.xiaoya.yidiantong.ui.NewDriverActivity;
 import com.xiaoya.yidiantong.ui.PreKnowledgeActivity;
 import com.xiaoya.yidiantong.ui.SubjectIndexActivity;
+import com.xiaoya.yidiantong.ui.VideoActivity;
 
 import java.io.IOException;
 
+import retrofit2.Call;
 
-public class MainActivity extends StarterActivity implements View.OnClickListener,
+
+public class MainActivity extends StarterNetworkActivity<UserInfo> implements View.OnClickListener,
         NavigationView.OnNavigationItemSelectedListener{
 
 
@@ -77,15 +97,80 @@ public class MainActivity extends StarterActivity implements View.OnClickListene
         navView.setNavigationItemSelectedListener(this);
         //需要加上这一句才能显示图片的正确颜色
         navView.setItemIconTintList(null);
+
         View headerView = navView.getHeaderView(0);
+        mAvatarImageView = ViewUtils.getView(headerView, R.id.nav_head_view_avatar_img);
+        mNicknameTextView = ViewUtils.getView(headerView, R.id.nav_head_view_nickname_tv);
         headerView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                     startActivity(new Intent(mContext, LoginActivity.class));
             }
         });
-
+        bindUserInfo();
+        initUserInfo();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        initUserInfo();
+    }
+
+    /**
+     * 只保存了用户名和密码的情况下去请求服务器用户信息
+     */
+    private void initUserInfo(){
+        String userName = ACache.get(this).getAsString(ApiService.USERNAME);
+        String userPW = ACache.get(this).getAsString(ApiService.PASSWORD);
+        if(!TextUtils.isEmpty(userName) && !TextUtils.isEmpty(userPW) && !AccountManager.isLogin()){
+            Call<UserInfo> userInfoCall = ApiService.createAuthService().getUserInfo(ApiService.APP_KEY, userName);
+            networkQueue().enqueue(userInfoCall);
+        }
+    }
+
+    @Override
+    public void respondSuccess(UserInfo data) {
+        super.respondSuccess(data);
+        if(data.status.equals(ApiService.OK)){
+            User user = data.content;
+            //去掉默认服务器给的图片
+            if(user.imgUrl.equals("http://7wy478.com1.z0.glb.clouddn.com/app/20151231231229.png")){
+                user.imgUrl = "";
+            }
+            user.userPW = ACache.get(this).getAsString(ApiService.PASSWORD);
+            AccountManager.store(user);
+            bindUserInfo();
+        }else {
+            Utils.showToast(this,getString(R.string.login_get_user_info_fail));
+        }
+    }
+
+
+
+    private void bindUserInfo() {
+        if (AccountManager.isLogin()) {
+            User user = AccountManager.getCurrentAccount();
+            mNicknameTextView.setText(user.name);
+            Glide.with(mContext).load(user.imgUrl).placeholder(R.drawable.ic_default_avatar)
+                    .diskCacheStrategy(DiskCacheStrategy.ALL)
+                    .transform(new GlideRoundTransform(mContext)).into(new SimpleTarget<GlideDrawable>() {
+                @Override
+                public void onResourceReady(GlideDrawable resource, GlideAnimation<? super GlideDrawable> glideAnimation) {
+                    Bitmap bitmap = ImageUtils.drawableToBitmap(resource);
+                    mAvatarImageView.setImageBitmap(bitmap);
+                    Bitmap sBitmap = ImageUtils.scaleDownBitmap(mContext, bitmap, 38);
+                    toolbar.setNavigationIcon(new BitmapDrawable(mContext.getResources(), sBitmap));
+                }
+            });
+            mNicknameTextView.setText(TextUtils.isEmpty(user.name) ? User.DEFAULT_NAME + user.id : user.name);
+        } else {
+            mNicknameTextView.setText("登陆/注册");
+            mAvatarImageView.setImageResource(R.drawable.ic_default_avatar);
+        }
+    }
+
+
     @Override
     protected void setupViews() {
         mainLayoutPreKnowledge = (LinearLayout) findViewById(R.id.main_layout_pre_knowledge);
@@ -123,13 +208,14 @@ public class MainActivity extends StarterActivity implements View.OnClickListene
                 break;
 
             case R.id.main_layout_subject2:
-
+                App.setCurrentSubject(2);
+                startActivity(VideoActivity.class);
                 break;
 
             case R.id.main_layout_subject3:
-
+                App.setCurrentSubject(3);
+                startActivity(VideoActivity.class);
                 break;
-
             case R.id.main_layout_subject4:
                 App.setCurrentSubject(4);
                 startActivity(SubjectIndexActivity.class);
@@ -158,6 +244,12 @@ public class MainActivity extends StarterActivity implements View.OnClickListene
         } else if (id == R.id.nav_comment) {
         } else if (id == R.id.nav_setting) {
         }else if (id == R.id.nav_invite) {
+            ACache.get(mContext).remove(ApiService.PASSWORD);
+            ACache.get(mContext).remove(ApiService.USERNAME);
+            AccountManager.logout();
+            Intent intent = new Intent(mContext, LoginActivity.class);
+            mContext.startActivity(intent);
+            mContext.finish();
         }
         drawerLayout.closeDrawer(GravityCompat.START);
         return true;

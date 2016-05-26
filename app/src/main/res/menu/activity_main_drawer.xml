@@ -18,7 +18,7 @@
 
         <item
             android:id="@+id/nav_invite"
-            android:title="@string/invite" />
+            android:title="@string/exit_login" />
     </group>
 
 

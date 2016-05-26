@@ -1,5 +1,6 @@
 package com.xiaoya.yidiantong.ui;
 
+import android.content.Intent;
 import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
@@ -14,10 +15,12 @@ import com.smartydroid.android.starter.kit.app.StarterNetworkActivity;
 import com.smartydroid.android.starter.kit.helper.StatusBarHelper;
 import com.smartydroid.android.starter.kit.utilities.ACache;
 import com.smartydroid.android.starter.kit.utilities.Utils;
+import com.xiaoya.yidiantong.MainActivity;
 import com.xiaoya.yidiantong.R;
 import com.xiaoya.yidiantong.api.ApiService;
 import com.xiaoya.yidiantong.api.ErrorHelper;
 import com.xiaoya.yidiantong.model.BaseResponse;
+import com.xiaoya.yidiantong.utils.Constant;
 import com.xiaoya.yidiantong.utils.Md5Tool;
 
 import retrofit2.Call;
@@ -124,6 +127,11 @@ public class LoginActivity extends StarterNetworkActivity<BaseResponse> implemen
             ACache.get(this).put(ApiService.PASSWORD,  Md5Tool.encryptPW(mUserPW));
             ACache.get(this).put(ApiService.USERNAME,  mUserName);
             Bundle bundle = new Bundle();
+            bundle.putBoolean(Constant.EXTRA_FROM_LOGIN_ACTIVITY, true);
+            Intent intent = new Intent(mContext, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK|Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.putExtras(bundle);
+            startActivity(intent);
             finish();
         }else {
             ErrorHelper.getInstance().handleErrCode(data.status);

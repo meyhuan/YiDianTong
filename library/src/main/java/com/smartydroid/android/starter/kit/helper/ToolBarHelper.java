@@ -27,6 +27,7 @@ public class ToolBarHelper {
 
     /*toolbar*/
     private Toolbar mToolBar;
+    private Toolbar mToolBarCopy;
 
     /*视图构造器*/
     private LayoutInflater mInflater;
@@ -84,6 +85,32 @@ public class ToolBarHelper {
 
     public FrameLayout getContentView() {
         return mContentView;
+    }
+
+    public void hintToolBar(){
+        mContentView.removeAllViews();
+        mToolBar.setVisibility(View.GONE);
+        FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) mContentView.getLayoutParams();
+        params.topMargin = 0;
+        mContentView.addView(mUserView, params);
+    }
+
+    public void showToolBar(){
+        mToolBar.setVisibility(View.VISIBLE);
+        mContentView.removeAllViews();
+        FrameLayout.LayoutParams params = new FrameLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.MATCH_PARENT);
+        TypedArray typedArray = mContext.getTheme().obtainStyledAttributes(ATTRS);
+        /*获取主题中定义的悬浮标志*/
+        boolean overly = typedArray.getBoolean(0, false);
+        /*获取主题中定义的toolbar的高度*/
+        int toolBarSize = (int) typedArray.getDimension(1,(int) mContext.getResources().getDimension(R.dimen.abc_action_bar_default_height_material));
+        typedArray.recycle();
+        /*如果是悬浮状态，则不需要设置间距*/
+        params.topMargin = overly ? 0 : toolBarSize;
+        mContentView.addView(mUserView, params);
+        mToolBarCopy = mToolBar;
+        initToolBar();
+        mToolBar.setTitle(mToolBarCopy.getTitle());
     }
 
     public Toolbar getToolBar() {
