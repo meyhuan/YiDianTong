@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/windowBackgroundLight">
+
+    <RelativeLayout
+        android:id="@+id/setting_avatar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:clickable="true"
+        android:background="@drawable/layout_item_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/TextStyle.Dark"
+            android:text="@string/setting_avatar"
+            tools:ignore="RelativeOverlap" />
+
+        <ImageView
+            android:id="@+id/setting_avatar_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_default_avatar"
+            android:layout_alignParentRight="true"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/divider_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/setting_account_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:clickable="true"
+        android:background="@drawable/layout_item_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/TextStyle.Dark"
+            android:text="@string/setting_account"
+            tools:ignore="RelativeOverlap" />
+
+        <TextView
+            android:id="@+id/setting_account_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            style="@style/TextStyle.Dark"
+            android:text="@string/setting_account"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/divider_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/setting_nickname_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:clickable="true"
+        android:background="@drawable/layout_item_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/TextStyle.Dark"
+            android:text="@string/setting_nickname"
+            tools:ignore="RelativeOverlap" />
+
+        <TextView
+            android:id="@+id/setting_nickname_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            style="@style/TextStyle.Primary"
+            android:text="@string/setting_set_nickname"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <include layout="@layout/divider_layout"/>
+
+    <RelativeLayout
+        android:id="@+id/setting_gander_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:clickable="true"
+        android:background="@drawable/layout_item_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            style="@style/TextStyle.Dark"
+            android:text="@string/setting_gender"
+            tools:ignore="RelativeOverlap" />
+
+        <TextView
+            android:id="@+id/setting_gender_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            style="@style/TextStyle.Primary"
+            android:text="@string/setting_man"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+
+    <RelativeLayout
+        android:id="@+id/setting_exit_account_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:clickable="true"
+        android:background="@drawable/layout_item_bg">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            style="@style/TextStyle.Primary"
+            android:text="@string/setting_exit_account"
+            android:textColor="@color/textColorGray"
+            tools:ignore="RelativeOverlap" />
+
+    </RelativeLayout>
+</LinearLayout>

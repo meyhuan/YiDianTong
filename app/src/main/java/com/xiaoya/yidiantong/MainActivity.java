@@ -45,8 +45,10 @@ import com.xiaoya.yidiantong.model.UserInfo;
 import com.xiaoya.yidiantong.ui.LoginActivity;
 import com.xiaoya.yidiantong.ui.NewDriverActivity;
 import com.xiaoya.yidiantong.ui.PreKnowledgeActivity;
+import com.xiaoya.yidiantong.ui.SettingActivity;
 import com.xiaoya.yidiantong.ui.SubjectIndexActivity;
 import com.xiaoya.yidiantong.ui.VideoActivity;
+import com.xiaoya.yidiantong.utils.Helper;
 
 import java.io.IOException;
 
@@ -104,7 +106,9 @@ public class MainActivity extends StarterNetworkActivity<UserInfo> implements Vi
         headerView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    startActivity(new Intent(mContext, LoginActivity.class));
+                if (Helper.isLogin(mContext, getString(R.string.not_login_tip1))) {
+                    startActivity(new Intent(mContext, SettingActivity.class));
+                }
             }
         });
         bindUserInfo();
@@ -243,6 +247,9 @@ public class MainActivity extends StarterNetworkActivity<UserInfo> implements Vi
         } else if (id == R.id.nav_fb) {
         } else if (id == R.id.nav_comment) {
         } else if (id == R.id.nav_setting) {
+            if(Helper.isLogin(this, getString(R.string.not_login_tip1))){
+                startActivity(new Intent(mContext, SettingActivity.class));
+            }
         }else if (id == R.id.nav_invite) {
             ACache.get(mContext).remove(ApiService.PASSWORD);
             ACache.get(mContext).remove(ApiService.USERNAME);

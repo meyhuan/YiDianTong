@@ -152,6 +152,7 @@
                 android:layout_marginLeft="10.0dip"
                 android:layout_marginRight="10.0dip"
                 android:lineSpacingExtra="5.0dip"
+                android:textColor="@color/textColorGray"
                 android:text="@string/pass_request"
                 android:textSize="16.0sp" />
 
@@ -175,6 +176,7 @@
                 android:layout_marginLeft="10.0dip"
                 android:layout_marginRight="10.0dip"
                 android:lineSpacingExtra="5.0dip"
+                android:textColor="@color/textColorGray"
                 android:text="@string/pass_criterion"
                 android:textSize="16.0sp" />
 

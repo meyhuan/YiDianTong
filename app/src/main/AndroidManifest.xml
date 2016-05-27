@@ -85,6 +85,9 @@
         <activity
             android:name=".ui.VideoActivity"
             android:theme="@style/Theme.Design.NoActionBar"></activity>
+        <activity
+            android:name=".ui.SettingActivity"
+            android:theme="@style/Theme.Design.NoActionBar"></activity>
 
 
         <activity

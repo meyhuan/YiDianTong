@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Environment;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
 import android.text.TextUtils;
 import android.view.Display;
 import android.view.View;
@@ -21,6 +22,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.apkfuns.logutils.LogUtils;
 import com.aspsine.multithreaddownload.CallBack;
 import com.aspsine.multithreaddownload.DownloadConfiguration;
 import com.aspsine.multithreaddownload.DownloadException;
@@ -28,13 +30,22 @@ import com.aspsine.multithreaddownload.DownloadManager;
 import com.aspsine.multithreaddownload.DownloadRequest;
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.loopj.android.http.AsyncHttpClient;
+import com.loopj.android.http.TextHttpResponseHandler;
 import com.smartydroid.android.starter.kit.app.StarterActivity;
+import com.smartydroid.android.starter.kit.utilities.ACache;
 import com.smartydroid.android.starter.kit.utilities.Utils;
 import com.xiaoya.yidiantong.R;
 import com.xiaoya.yidiantong.model.Video;
+import com.xiaoya.yidiantong.model.VideoDetail;
+import com.xiaoya.yidiantong.utils.DataHelper;
 import com.xiaoya.yidiantong.view.StretchVideoView;
 
+import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.InputStream;
+
+import cz.msebera.android.httpclient.Header;
 
 /**
  * Author: meyu
@@ -79,7 +90,40 @@ public class VideoStudyDetailActivity extends StarterActivity {
         initVideo();
         if (currentVideo != null && !TextUtils.isEmpty(currentVideo.getPicUrl())) {
             Glide.with(this).load(currentVideo.getPicUrl()).diskCacheStrategy(DiskCacheStrategy.ALL).into(ivDefault);
+            String data = ACache.get(mContext).getAsString("video_data"+currentVideo.getId());
+            if(TextUtils.isEmpty(data)){
+                initDetailData();
+            }else {
+                initViewData(data);
+            }
+
         }
+
+    }
+
+    private void initViewData(String data){
+        tvRequestContent.setText(DataHelper.getValue(data, "passDemand"));
+        tvCriterionContent.setText(DataHelper.getValue(data, "criterion"));
+        tvStrategyContent.setText(DataHelper.getValue(data, "passStrategy"));
+    }
+
+    private void initDetailData(){
+        String url = DataHelper.getVideoDetailUrl(currentVideo.getId());
+        AsyncHttpClient httpClient = new AsyncHttpClient();
+        httpClient.get(url, new TextHttpResponseHandler() {
+            @Override
+            public void onFailure(int statusCode, Header[] headers, String responseString, Throwable throwable) {
+                LogUtils.i(responseString);
+                showToastShort("加载数据失败");
+            }
+
+            @Override
+            public void onSuccess(int statusCode, Header[] headers, String responseString) {
+                LogUtils.i(responseString);
+                ACache.get(mContext).put("video_data"+currentVideo.getId(), responseString);
+              initViewData(responseString);
+            }
+        });
     }
 
     private void initVideo(){

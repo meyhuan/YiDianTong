@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/setting_gender_selcet_man_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nav_item_bg"
+        android:padding="10dp">
+
+        <RadioButton
+            android:id="@+id/setting_gender_selcet_man_radioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_button_bg"
+            android:button="@null"
+            android:clickable="false"
+            android:checked="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorGray"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"
+            android:text="@string/setting_man"/>
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/setting_gender_selcet_women_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nav_item_bg"
+        android:padding="10dp">
+
+        <RadioButton
+            android:id="@+id/setting_gender_selcet_women_radioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radio_button_bg"
+            android:button="@null"
+            android:clickable="false"
+            android:checked="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/textColorGray"
+            android:textSize="20sp"
+            android:layout_alignParentRight="true"
+            android:text="@string/setting_women"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

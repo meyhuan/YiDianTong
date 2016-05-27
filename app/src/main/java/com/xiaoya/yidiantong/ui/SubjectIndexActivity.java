@@ -75,7 +75,10 @@ public class SubjectIndexActivity extends StarterActivity implements View.OnClic
                 startActivity(practiceIntent);
                 break;
             case R.id.layout_random_practice:
-
+                Intent practiceIntent2 = new Intent(mContext, ZhentiStudyQesPagerActivity.class);
+                practiceIntent2.putExtra("is_practice",true);
+                practiceIntent2.putExtra("is_random",true);
+                startActivity(practiceIntent2);
                 break;
             case R.id.layout_error_qes:
                 startActivity(ErrorQuestionActivity.class);

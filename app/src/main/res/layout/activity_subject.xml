@@ -283,6 +283,7 @@
             <RelativeLayout
                 android:id="@id/layout_week_exam"
                 style="@style/subject_layout"
+                android:visibility="gone"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/layout_select">
@@ -320,6 +321,7 @@
             <RelativeLayout
                 android:id="@id/layout_guess_qes"
                 style="@style/subject_layout"
+                android:visibility="gone"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/layout_select">

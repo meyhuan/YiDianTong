@@ -1,6 +1,0 @@
-picName=qtbx1.jpg，name=突起路标与标线配合设置示例
-picName=qtbx2.jpg，name=出口匝道突起路标布设示例
-picName=qtbx3.jpg，name=突起路标组成的虚线标线示例
-picName=qtbx4.jpg，name=突起路标组成的单实线示例
-picName=qtbx5.jpg，name=突起路标组成的双实线示例
-picName=qtbx6.jpg，name=曲线段轮廓标设置间隔示例

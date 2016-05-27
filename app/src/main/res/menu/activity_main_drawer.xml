@@ -4,13 +4,16 @@
     <group android:checkableBehavior="none">
         <item
             android:id="@+id/nav_about_bdj"
-            android:title="@string/app_name" />
+            android:title="@string/app_name"
+            android:visible="false"/>
         <item
             android:id="@+id/nav_comment"
-            android:title="@string/uer_comment" />
+            android:title="@string/uer_comment"
+            android:visible="false" />
         <item
             android:id="@+id/nav_fb"
-            android:title="@string/face_back" />
+            android:title="@string/face_back"
+            android:visible="false"/>
 
         <item
             android:id="@+id/nav_setting"
@@ -18,7 +21,8 @@
 
         <item
             android:id="@+id/nav_invite"
-            android:title="@string/exit_login" />
+            android:title="@string/exit_login"
+            android:visible="false" />
     </group>
 
 

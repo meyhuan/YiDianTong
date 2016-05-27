@@ -41,6 +41,7 @@ public class ZhentiStudyQesPagerActivity extends StarterActivity{
     private boolean isPractice = false;
     private boolean isError = false;
     private boolean isSimulation = false;
+    private boolean isRandom = false;
 
     TextView rightTextView;
 
@@ -50,6 +51,7 @@ public class ZhentiStudyQesPagerActivity extends StarterActivity{
     private int totalTimes = 1 * 60 * 1000;
     private int errorCount = 0;
     CountDownTimer countDownTimer;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +59,7 @@ public class ZhentiStudyQesPagerActivity extends StarterActivity{
         isPractice = getIntent().getBooleanExtra("is_practice", false);
         isError = getIntent().getBooleanExtra("is_error", false);
         isSimulation = getIntent().getBooleanExtra("is_simulation", false);
+        isRandom = getIntent().getBooleanExtra("is_random", false);
         setContentView(R.layout.activity_qeuestion_list);
         new DataTask().execute();
 
@@ -168,14 +171,16 @@ public class ZhentiStudyQesPagerActivity extends StarterActivity{
         @Override
         protected void onPostExecute(List<Question> questions) {
             questionList = questions;
-            if(isPractice && isSimulation && !isError){
+            if(isPractice && isSimulation && !isError || isRandom){
                 //随机取出一百道题目
                 Random random = new Random(System.currentTimeMillis());
                 Collections.shuffle(questions,random);
                 for (int i = 100; i < questions.size();){
                     questions.remove(i);
                 }
-                startCount();
+                if(!isRandom){
+                    startCount();
+                }
             }
             viewPager.setAdapter(new ViewPageAdapt(getSupportFragmentManager(), questions));
         }
