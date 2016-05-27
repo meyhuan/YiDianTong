@@ -1,6 +1,12 @@
 package com.xiaoya.yidiantong.utils;
 
 import com.apkfuns.logutils.LogUtils;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.smartydroid.android.starter.kit.app.StarterKitApp;
+import com.smartydroid.android.starter.kit.model.entity.Entity;
+import com.smartydroid.android.starter.kit.utilities.ACache;
+import com.xiaoya.yidiantong.model.ExamRecord;
 import com.xiaoya.yidiantong.model.QuestionCategory;
 import com.xiaoya.yidiantong.model.VideoDetail;
 
@@ -9,6 +15,7 @@ import org.xml.sax.SAXException;
 import org.xml.sax.helpers.DefaultHandler;
 
 import java.io.InputStream;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -128,6 +135,20 @@ public class DataHelper {
     public static String getVideoDetailUrl(int id){
         return "http://dev.cheyooh.com/cheyooh_driving?channel=G003%25E8%2585%25BE%25E8%25AE%25AFv1.11.0&" +
                 "id="+id+"&location_cityid=07001&m=videos_detail&tagversion=va&uid=34dfe1c832e24632b932079b0358d732&ver=1.11.0&checksign=4051814c9a10976627a860656fef2942";
+    }
+
+    public static void put(List<ExamRecord> tList, String key){
+        if(tList == null || tList.size() == 0){
+            return;
+        }
+        String json = new Gson().toJson(tList);
+        ACache.get(StarterKitApp.appContext()).put(key, json);
+    }
+
+    public static List<ExamRecord> getAsList(String key){
+        Gson gson = new Gson();
+        Type type = new TypeToken<List<ExamRecord>>(){}.getType();
+        return gson.fromJson(ACache.get(StarterKitApp.appContext()).getAsString(key), type);
     }
 
 

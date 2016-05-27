@@ -7,9 +7,18 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.smartydroid.android.starter.kit.app.StarterActivity;
+import com.smartydroid.android.starter.kit.model.entity.Entity;
+import com.smartydroid.android.starter.kit.utilities.ACache;
+import com.smartydroid.android.starter.kit.utilities.DateUtils;
 import com.xiaoya.yidiantong.App;
 import com.xiaoya.yidiantong.R;
+import com.xiaoya.yidiantong.model.ExamRecord;
+import com.xiaoya.yidiantong.utils.DataHelper;
 
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 import java.util.Locale;
 
 /**
@@ -43,7 +52,8 @@ public class SimluationExamResultActicity extends StarterActivity{
         scores = getIntent().getIntExtra("scores", 0);
         int minute =  time / 1000 / 60;
         int timeString = time / 1000 % 60;
-        tvTime.setText(String.valueOf(minute + "分" + timeString + "秒"));
+        String spendTime = String.valueOf(minute + "分" + timeString + "秒");
+        tvTime.setText(spendTime);
         tvScore.setText(String.valueOf(scores+ "分"));
         int sub = 1;
         if(App.getCurrentSubject() == 1){
@@ -59,7 +69,17 @@ public class SimluationExamResultActicity extends StarterActivity{
             tvComment.setText(String.format(Locale.CHINA, s, sub));
             ivGood.setVisibility(View.VISIBLE);
         }
+        List<ExamRecord> list =  DataHelper.getAsList("key_record_list");
+        if(list == null){
+            list = new ArrayList<>();
+        }
+        Date date = new Date(System.currentTimeMillis());
+        String formatData = new  SimpleDateFormat("yyyy-MM-dd hh:mm", Locale.CHINA).format(date);
+        list.add(new ExamRecord(formatData , scores+"分", spendTime));
+       DataHelper.put(list, "key_record_list");
     }
+
+
 
     private void assignViews() {
         ivUserHead = (ImageView) findViewById(R.id.iv_user_head);

@@ -28,8 +28,11 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.RandomAccessFile;
 import java.io.Serializable;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -48,6 +51,10 @@ import android.graphics.PixelFormat;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.Environment;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.smartydroid.android.starter.kit.model.entity.Entity;
 
 /**
  * @author Michael Yang（www.yangfuhai.com） update at 2013.08.07
@@ -541,6 +548,7 @@ public class ACache {
         return Utils.bitmap2Drawable(Utils.Bytes2Bimap(getAsBinary(key)));
     }
 
+
     /**
      * 获取缓存文件
      *
@@ -903,6 +911,8 @@ public class ACache {
         }
         return file;
     }
+
+
 
 
     /**
