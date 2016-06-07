@@ -61,6 +61,7 @@
                 style="@style/subject_layout"
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
+                android:visibility="gone"
                 android:background="@drawable/layout_select">
 
                 <TextView

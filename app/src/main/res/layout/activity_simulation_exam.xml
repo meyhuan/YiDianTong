@@ -148,6 +148,7 @@
                 android:layout_marginLeft="10.0dip"
                 android:layout_marginRight="15.0dip"
                 android:layout_weight="0.5"
+                android:visibility="gone"
                 android:background="@drawable/btn_select"
                 android:text="@string/simulation_exam_undown"
                 android:textColor="@color/white"
