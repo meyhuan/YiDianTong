@@ -24,6 +24,7 @@
         app:headerLayout="@layout/nav_header_main"
         app:itemBackground="@drawable/nav_item_bg"
         app:itemTextAppearance="@style/TextStyle.Primary"
+        android:visibility="gone"
         app:itemTextColor="@color/textColorPrimary"
         app:menu="@menu/activity_main_drawer" />
 

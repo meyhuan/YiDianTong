@@ -93,8 +93,8 @@ public class MainActivity extends StarterNetworkActivity<UserInfo> implements Vi
                 super.onDrawerOpened(drawerView);
             }
         };
-        drawerLayout.addDrawerListener(toggle);
-        toggle.syncState();
+//        drawerLayout.addDrawerListener(toggle);
+//        toggle.syncState();
 
         navView.setNavigationItemSelectedListener(this);
         //需要加上这一句才能显示图片的正确颜色
