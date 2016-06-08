@@ -14,10 +14,12 @@ import android.widget.TextView;
 import com.smartydroid.android.starter.kit.app.StarterActivity;
 import com.xiaoya.yidiantong.App;
 import com.xiaoya.yidiantong.R;
+import com.xiaoya.yidiantong.model.Question;
 import com.xiaoya.yidiantong.model.QuestionCategory;
 
 import org.litepal.crud.DataSupport;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -111,8 +113,11 @@ public class ZhentiStudyActivity extends StarterActivity implements AdapterView.
 
         @Override
         protected void onPostExecute(List<QuestionCategory> questionCategories) {
-            super.onPostExecute(questionCategories);
-            ZhenTiAdapt zhenTiAdapt = new ZhenTiAdapt(questionCategories);
+            List<QuestionCategory> list = new ArrayList<>();
+            for (int i = 0; i < 4; i ++) {
+                list.add(questionCategories.get(i));
+            }
+            ZhenTiAdapt zhenTiAdapt = new ZhenTiAdapt(list);
             listView.setAdapter(zhenTiAdapt);
             zhenTiAdapt.notifyDataSetChanged();
         }

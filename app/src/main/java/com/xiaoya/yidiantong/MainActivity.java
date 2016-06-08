@@ -106,9 +106,9 @@ public class MainActivity extends StarterNetworkActivity<UserInfo> implements Vi
         headerView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (Helper.isLogin(mContext, getString(R.string.not_login_tip1))) {
-                    startActivity(new Intent(mContext, SettingActivity.class));
-                }
+//                if (Helper.isLogin(mContext, getString(R.string.not_login_tip1))) {
+//                    startActivity(new Intent(mContext, SettingActivity.class));
+//                }
             }
         });
         bindUserInfo();
@@ -247,9 +247,9 @@ public class MainActivity extends StarterNetworkActivity<UserInfo> implements Vi
         } else if (id == R.id.nav_fb) {
         } else if (id == R.id.nav_comment) {
         } else if (id == R.id.nav_setting) {
-            if(Helper.isLogin(this, getString(R.string.not_login_tip1))){
-                startActivity(new Intent(mContext, SettingActivity.class));
-            }
+//            if(Helper.isLogin(this, getString(R.string.not_login_tip1))){
+//                startActivity(new Intent(mContext, SettingActivity.class));
+//            }
         }else if (id == R.id.nav_invite) {
             ACache.get(mContext).remove(ApiService.PASSWORD);
             ACache.get(mContext).remove(ApiService.USERNAME);
